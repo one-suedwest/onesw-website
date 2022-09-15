@@ -1,0 +1,42 @@
+---
+export interface Props {
+	title: string;
+    description: string;
+    baseUrl: string;
+    ogTitle: string;
+    ogDescription: string;
+    siteName: string;
+}
+
+const {
+    title,
+    description,
+    baseUrl,
+    ogTitle,
+    ogDescription,
+    siteName,
+} = Astro.props;
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="favicon.svg">
+    <link rel="mask-icon" href="mask-icon.svg" color="#000000">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="generator" content={Astro.generator} />
+    {/* https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#comma-separated-list */}
+    <meta name="robots" content="max-image-preview:large">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <link rel="canonical" href={baseUrl}>
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={ogTitle}>
+    <meta property="og:description" content={ogDescription}>
+    <meta property="og:url" content={baseUrl}>
+    <meta property="og:site_name" content={siteName}>
+    <meta property="og:updated_time" content={new Date().toISOString()}>
+</head>

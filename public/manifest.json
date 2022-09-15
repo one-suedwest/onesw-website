@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "author": "Fabian Letsch",
+    "name": "One Südwest",
+    "short_name": "onesw",
+    "icons": [{
+        "src": "google-touch-icon.png",
+        "sizes": "512x512"
+    }],
+    "start_url": "/",
+    "background_color": "#2a2a2a",
+    "theme_color": "#000000",
+    "display": "browser",
+    "scope": "/",
+    "description": "Die Webseite von One Südwest"
+}
