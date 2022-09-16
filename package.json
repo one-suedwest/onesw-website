@@ -16,7 +16,6 @@
     "astro-compress": "^1.0.8"
   },
   "devDependencies": {
-    "astro-robots-txt": "^0.3.8",
-    "sass": "^1.54.9"
+    "astro-robots-txt": "^0.3.8"
   }
 }
