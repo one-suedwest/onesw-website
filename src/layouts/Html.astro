@@ -1,0 +1,14 @@
+---
+import Head, { Props as HeadProps } from '../components/Head.astro';
+
+export type Props = HeadProps;
+---
+<!DOCTYPE html>
+<html lang="de">
+    <Head
+        {...Astro.props}
+    />
+    <body>
+        <slot />
+    </body>
+</html>
