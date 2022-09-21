@@ -1,0 +1,59 @@
+---
+export interface Props {
+	srcset: string;
+    alt: string;
+    position?: string;
+    centerImageSrcset?: string;
+    centerImageAlt?: string;
+}
+
+const {
+    srcset,
+    alt,
+    position = "50% 50%",
+    centerImageSrcset,
+    centerImageAlt,
+} = Astro.props;
+---
+
+<div class="wrapper">
+    <img
+        srcset={srcset}
+        alt={alt}
+        class="header-image"
+        style={`object-position: ${position}`}
+    />
+    {centerImageSrcset && (
+        <img
+            srcset={centerImageSrcset}
+            alt={centerImageAlt}
+            class="center-image"
+        />
+    )}
+</div>
+
+<style>
+    .wrapper {
+        width: 100%;
+        height: calc(100vh - 100px);
+        position: relative;
+    }
+
+    .header-image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .center-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: calc(100vw - 80px);
+        width: 228px;
+        user-select: none;
+        pointer-events: none;
+    }
+</style>
