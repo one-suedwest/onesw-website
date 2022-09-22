@@ -60,19 +60,19 @@ const {
     <link rel="shortlink" href={pageUrl}>
     <style is:inline>
         @font-face {
-            font-family: 'Roboto Condensed';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(/fonts/roboto-condensed-normal-400.woff2) format('woff2');
-        }
-
-        @font-face {
             font-family: 'Teko';
             font-style: normal;
             font-weight: 600;
             font-display: swap;
             src: url(/fonts/teko-normal-600.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 200;
+            font-display: swap;
+            src: url(/fonts/montserrat-normal-200.woff2) format('woff2');
         }
 
         :root {
@@ -122,14 +122,14 @@ const {
 
         .text-content p {
             color: var(--font-color);
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 16px 0;
             font-size: 18px;
         }
 
         .text-content a {
             color: var(--light-highlight-color);
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             text-decoration: none;
         }
