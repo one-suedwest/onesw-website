@@ -1,11 +1,19 @@
+---
+export interface Props {
+    href: string;
+}
+const {
+    href
+} = Astro.props;
+---
 <div class="navigation">
     <div class="top-bar">
         <nav class="top-bar-nav">
-            <a href="/"title="Startseite">
+            <a href="/" title="Startseite">
                 <img src="./images/logo_small.webp" alt="One Logo">
             </a>
             <div class="desktop-navigation">
-                <a class="link" href="/" title="Startseite">Startseite</a>
+                <a class="link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
                 <a class="link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
                 <a class="link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
             </div>
@@ -28,7 +36,7 @@
     
     <div class="mobile-navigation">
         <nav>
-            <a class="link" href="/" title="Startseite">Startseite</a>
+            <a class="link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
             <a class="link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
             <a class="link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
             <a class="link" href="https://www.instagram.com/onemovementsw/" target="_blank" title="Instagram">Instagram</a>
@@ -38,14 +46,6 @@
 </div>
 
 <script>
-    const activeLinks = document.querySelectorAll(`a[href="${location.pathname}"]`);
-
-    if (activeLinks.length !== 0) {
-        [...activeLinks].forEach((activeLink) => {
-            activeLink.classList.add('active');
-        });
-    }
-
     const burgerMenu = document.querySelector('.burger-menu');
 
     const burgerIcon = document.querySelector('.burger-menu .burger');
@@ -99,7 +99,7 @@
         text-decoration: none;
     }
 
-    .link:hover, .link.active {
+    .link:hover, .link[data-active] {
         color: var(--highlight-color);
     }
 
