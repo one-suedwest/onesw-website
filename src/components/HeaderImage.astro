@@ -5,8 +5,7 @@ export interface Props {
 	srcset: string;
     alt: string;
     position?: string;
-    centerImageSrcset?: string;
-    centerImageAlt?: string;
+    centerImage?: boolean;
     bottomTransitionColor?: string;
 }
 
@@ -14,8 +13,7 @@ const {
     srcset,
     alt,
     position = "50% 50%",
-    centerImageSrcset,
-    centerImageAlt,
+    centerImage = false,
     bottomTransitionColor = "var(--background-color)",
 } = Astro.props;
 ---
@@ -27,12 +25,10 @@ const {
         class="header-image"
         style={`object-position: ${position}`}
     />
-    {centerImageSrcset && (
-        <img
-            srcset={centerImageSrcset}
-            alt={centerImageAlt || ''}
-            class="center-image"
-        />
+    {centerImage && (
+        <div class="center-image">
+            <slot />
+        </div>
     )}
     <div class="bottom-transition">
         <Transition
@@ -61,7 +57,7 @@ const {
         left: 50%;
         transform: translate(-50%, -50%);
         max-width: calc(100vw - 80px);
-        width: 228px;
+        width: 226px;
         user-select: none;
         pointer-events: none;
     }

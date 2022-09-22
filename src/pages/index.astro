@@ -4,6 +4,7 @@ import Html from '../layouts/Html.astro';
 import Navigation from '../components/Navigation.astro';
 import HeaderImage from '../components/HeaderImage.astro';
 import TextContent from '../components/TextContent.astro';
+import OneLogoWithText from '../components/svg/OneLogoWithText.astro';
 ---
 
 <Html
@@ -22,11 +23,12 @@ import TextContent from '../components/TextContent.astro';
 		srcset={[400, 600, 800, 1000, 1200, 1440, 1920].map(width => (
 			`/images/index_header-image/${width}.webp ${width}w`
 		)).join(', ')}
-		centerImageSrcset="/images/one-logo-large.webp 228w"
+		centerImage={true}
 		alt="Kopfbild - Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das One Südwest Logo"
-		centerImageAlt=""
 		position="80% 40%"
-	/>
+	>
+		<OneLogoWithText />
+	</HeaderImage>
 	<TextContent
 		backgroundColor="var(--background-color)"
 		bottomTransitionColor="var(--dark-background-color)"
