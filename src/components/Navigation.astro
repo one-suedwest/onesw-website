@@ -15,9 +15,9 @@ const {
                 <OneLogoSmall />
             </a>
             <div class="desktop-navigation">
-                <a class="link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
-                <a class="link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
-                <a class="link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
+                <a class="navigation-link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
+                <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
+                <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
             </div>
             <div class="burger-menu">
                 <div class="burger burger-icon show">
@@ -38,11 +38,11 @@ const {
     
     <div class="mobile-navigation">
         <nav>
-            <a class="link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
-            <a class="link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
-            <a class="link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
-            <a class="link" href="https://www.instagram.com/onemovementsw/" target="_blank" title="Instagram">Instagram</a>
-            <a class="link" href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Youtube">Youtube</a>
+            <a class="navigation-link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
+            <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Leadership">Leadership</a>
+            <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Spenden">Spenden</a>
+            <a class="navigation-link" href="https://www.instagram.com/onemovementsw/" target="_blank" title="Instagram">Instagram</a>
+            <a class="navigation-link" href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Youtube">Youtube</a>
         </nav>
     </div>
 </div>
@@ -91,18 +91,6 @@ const {
     .desktop-navigation {
         display: none;
         gap: 40px;
-    }
-
-    .link {
-        color: var(--font-color);
-        font-family: "Teko", sans-serif;
-        font-size: 22px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    .link:hover, .link[data-active] {
-        color: var(--highlight-color);
     }
 
     .mobile-navigation {

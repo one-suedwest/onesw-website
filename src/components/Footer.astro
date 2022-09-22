@@ -1,0 +1,35 @@
+<div class="footer">
+    <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
+    <div class="footer-navigation">
+        <a class="navigation-link" href="/impressum">Impressum</a>
+        <a class="navigation-link" href="/datenschutz">Datenschutz</a>
+    </div>
+</div>
+
+<style is:inline>
+    .footer {
+        position: absolute;
+        bottom: 0;
+        height: var(--footer-height);
+        background-color: var(--dark-background-color);
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 34px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-navigation {
+        display: flex;
+        gap: 40px;
+    }
+
+    .copyright {
+        color: var(--font-color);
+        font-family: "Teko", sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+</style>

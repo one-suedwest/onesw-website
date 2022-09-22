@@ -81,11 +81,21 @@ const {
             --light-highlight-color: #ff9999;
             --font-color: #fff;
             --dark-background-color: #000;
+            --footer-height: 90px;
         }
 
         body {
             margin: 0;
             background-color: var(--background-color);
+        }
+
+        #page-wrapper {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #content-wrapper {
+            padding-bottom: var(--footer-height);
         }
 
         .text-content {
@@ -132,6 +142,18 @@ const {
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             text-decoration: none;
+        }
+
+        .navigation-link {
+            color: var(--font-color);
+            font-family: "Teko", sans-serif;
+            font-size: 22px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .navigation-link:hover, .navigation-link[data-active] {
+            color: var(--highlight-color);
         }
     </style>
 </head>
