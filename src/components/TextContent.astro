@@ -1,0 +1,21 @@
+---
+import Transition from "./Transition.astro";
+
+export interface Props {
+    backgroundColor?: string;
+	bottomTransitionColor?: string;
+}
+
+const {
+    backgroundColor = 'var(--background-color)',
+    bottomTransitionColor = 'var(--dark-background-color)'
+} = Astro.props;
+---
+<div style={`background-color: ${backgroundColor}`}>
+    <div class="text-content">
+        <slot />
+    </div>
+    <Transition
+        color={bottomTransitionColor}
+    />
+</div>
