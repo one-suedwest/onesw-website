@@ -1,4 +1,6 @@
 ---
+import OneLogoSmall from './svg/OneLogoSmall.astro';
+
 export interface Props {
     href: string;
 }
@@ -10,7 +12,7 @@ const {
     <div class="top-bar">
         <nav class="top-bar-nav">
             <a href="/" title="Startseite">
-                <img src="./images/logo_small.webp" alt="One Logo">
+                <OneLogoSmall />
             </a>
             <div class="desktop-navigation">
                 <a class="link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
