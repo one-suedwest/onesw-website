@@ -1,10 +1,13 @@
 ---
+import Transition from './Transition.astro';
+
 export interface Props {
 	srcset: string;
     alt: string;
     position?: string;
     centerImageSrcset?: string;
     centerImageAlt?: string;
+    bottomTransitionColor?: string;
 }
 
 const {
@@ -13,6 +16,7 @@ const {
     position = "50% 50%",
     centerImageSrcset,
     centerImageAlt,
+    bottomTransitionColor = "var(--background-color)",
 } = Astro.props;
 ---
 
@@ -30,6 +34,11 @@ const {
             class="center-image"
         />
     )}
+    <div class="bottom-transition">
+        <Transition
+            color={bottomTransitionColor}
+        />
+    </div>
 </div>
 
 <style>
@@ -55,5 +64,11 @@ const {
         width: 228px;
         user-select: none;
         pointer-events: none;
+    }
+
+    .bottom-transition {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 </style>

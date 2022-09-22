@@ -3,6 +3,7 @@ import Html from '../layouts/Html.astro';
 
 import Navigation from '../components/Navigation.astro';
 import HeaderImage from '../components/HeaderImage.astro';
+import TextContent from '../components/TextContent.astro';
 ---
 
 <Html
@@ -26,6 +27,23 @@ import HeaderImage from '../components/HeaderImage.astro';
 		centerImageAlt=""
 		position="80% 40%"
 	/>
+	<TextContent
+		backgroundColor="var(--background-color)"
+		bottomTransitionColor="var(--dark-background-color)"
+	>
+		<h1>ONE Südwest</h1>
+		<h2>Jugendliche von und für Jesus und seiner Gemeinde begeistern</h2>
+		<p>
+			One Südwest, auch bekannt als Youth Alive RPS, ist die Landesjugendarbeit
+			des BFP in Rheinland-Pfalz und Saarland. Wir veranstalten Jugendfreizeiten
+			und Weiterbildungsevents für Jugendleiter und Mitarbeiter.
+			<br>
+			<br>
+			Wir sind ein Arbeitszweig des
+			<a href="http://www.ljw-rps.de/">Landesjugendwerks von Rheinland-Pfalz und Saarland</a>
+			und Teil des <a href="http://www.ljw-rps.de/">ONE Movements</a>.
+		</p>
+	</TextContent>
 </Html>
 
 <style>
