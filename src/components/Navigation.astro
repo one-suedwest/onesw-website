@@ -1,4 +1,6 @@
 ---
+import Instagram from './svg/Instagram.astro';
+import YouTube from './svg/YouTube.astro';
 import OneLogoSmall from './svg/OneLogoSmall.astro';
 
 export interface Props {
@@ -18,6 +20,8 @@ const {
                 <a class="navigation-link" href="/" data-active={href === '/'}>Startseite</a>
                 <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a>
                 <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Über Paypal an uns spenden">Spenden</a>
+                <a href="https://www.instagram.com/onemovementsw/" target="_blank" title="Unsere Instagram Seite"><Instagram /></a>
+                <a href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Unser YouTube-Kanal"><YouTube /></a>
             </div>
             <div class="burger-menu">
                 <div class="burger burger-icon show">
@@ -90,6 +94,8 @@ const {
 
     .desktop-navigation {
         display: none;
+        align-items: center;
+        line-height: 1.1;
         gap: 40px;
     }
 
