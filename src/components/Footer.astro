@@ -1,17 +1,23 @@
 ---
+import Transition from './Transition.astro';
+
 export interface Props {
     href: string;
 }
 const {
-    href
+    href,
 } = Astro.props;
 ---
-
 <div class="footer">
-    <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
-    <div class="footer-navigation">
-        <a class="navigation-link" href="/impressum" data-active={href === '/impressum'}>Impressum</a>
-        <a class="navigation-link" href="/datenschutz" data-active={href === '/datenschutz'}>Datenschutz</a>
+    <Transition
+        color="var(--dark-background-color)"
+    />
+    <div class="footer-content">
+        <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
+        <div class="footer-navigation">
+            <a class="navigation-link" href="/impressum" data-active={href === '/impressum'}>Impressum</a>
+            <a class="navigation-link" href="/datenschutz" data-active={href === '/datenschutz'}>Datenschutz</a>
+        </div>
     </div>
 </div>
 
@@ -19,7 +25,12 @@ const {
     .footer {
         position: absolute;
         bottom: 0;
+        width: 100%;
         height: var(--footer-height);
+    }
+
+    .footer-content {
+        height: calc(var(--footer-height) - 80px);
         background-color: var(--dark-background-color);
         width: 100%;
         box-sizing: border-box;
