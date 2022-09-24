@@ -86,9 +86,9 @@ const {
         @font-face {
             font-family: 'Montserrat';
             font-style: normal;
-            font-weight: 200;
+            font-weight: 400;
             font-display: swap;
-            src: url(/fonts/montserrat-normal-200.woff2) format('woff2');
+            src: url(/fonts/montserrat-normal-400.woff2) format('woff2');
         }
 
         :root {
@@ -124,6 +124,10 @@ const {
             max-width: 900px;
         }
 
+        .text-content section {
+            margin: 56px 0;
+        }
+
         .text-content h1 {
             color: var(--font-color);
             font-family: 'Teko', sans-serif;
@@ -142,8 +146,19 @@ const {
         .text-content h3 {
             color: var(--font-color);
             font-family: 'Teko', sans-serif;
-            font-size: 36px;
+            font-size: 28px;
             margin: 0;
+            margin-top: 12px;
+            margin-bottom: -12px;
+        }
+
+        .text-content h4 {
+            color: var(--light-highlight-color);
+            font-family: 'Teko', sans-serif;
+            font-size: 22px;
+            margin: 0;
+            margin-bottom: -16px;
+            margin-top: 16px;
         }
 
         .text-content p {
@@ -157,13 +172,6 @@ const {
             color: var(--light-highlight-color);
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;
-        }
-
-        .text-content h4 {
-            color: var(--light-highlight-color);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            margin: 0;
         }
 
         .navigation-link {
