@@ -1,0 +1,19 @@
+---
+export interface Props {
+    email: string;
+}
+
+const {
+    email,
+} = Astro.props;
+
+const identifier = Math.round(Math.random()*100000000);
+---
+<span data-identifier={identifier}></span>
+
+<script is:inline define:vars={{ identifier, email }}>
+    setTimeout(() => {
+        const el = document.querySelector(`[data-identifier="${identifier}"`);
+        el.innerHTML = email.split('').map(x => '<span>' + x + '</span>').join('');
+    }, 4000);
+</script>
