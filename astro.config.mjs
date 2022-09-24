@@ -11,7 +11,7 @@ export default defineConfig({
   },
   integrations: [compress(), sitemap(), robotsTxt({
     policy: [{
-      disallow: '/',
+      allow: '/',
       userAgent: '*'
     }]
   })]
