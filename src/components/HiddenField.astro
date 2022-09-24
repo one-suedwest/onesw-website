@@ -1,0 +1,26 @@
+---
+export interface Props {
+    fieldValue: string;
+}
+
+const {
+    fieldValue,
+} = Astro.props;
+
+const identifier = Math.round(Math.random()*100000000);
+---
+<span data-identifier={identifier}>Wird angezeigt in 10 Sekunden</span>
+
+<script is:inline define:vars={{ identifier, fieldValue }}>
+    const el = document.querySelector(`[data-identifier="${identifier}"`);
+    let counter = 10;
+
+    const interval = setInterval(() => {
+        counter--;
+        el.innerHTML = `Wird angezeigt in ${counter} Sekunden.`;
+        if (counter === 0) {
+            el.innerHTML = fieldValue.split('').map(x => '<span>' + x + '</span>').join('');
+            clearInterval(interval);
+        }
+    }, 1000);
+</script>
