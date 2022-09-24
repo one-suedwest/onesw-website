@@ -1,11 +1,11 @@
 ---
-import Html from '../layouts/Html.astro';
+import Html from "../layouts/Html.astro";
 
-import Navigation from '../components/Navigation.astro';
-import TextContent from '../components/TextContent.astro';
-import HiddenField from '../components/HiddenField.astro';
+import Navigation from "../components/Navigation.astro";
+import TextContent from "../components/TextContent.astro";
+import HiddenField from "../components/HiddenField.astro";
 
-const href = '/impressum';
+const href = "/impressum";
 ---
 
 <Html
@@ -15,7 +15,7 @@ const href = '/impressum';
 	ogTitle="Impressum | One Südwest"
 	ogDescription="Rechtlich notwendige Angaben"
 	siteName="Impressum | One Südwest"
-    updatedTime="2022-09-24T09:23:17.492Z"
+	updatedTime="2022-09-24T09:23:17.492Z"
 	href={href}
 >
 	<Navigation href={href} />
@@ -26,13 +26,34 @@ const href = '/impressum';
 		<h1 style="margin-bottom: -32px;">Impressum</h1>
 		<section>
 			<h2>Allgemeine Informationen</h2>
-			<p>One Südwest ist ein nicht eingetragener Markenname von Youth Alive Rheinland-Pfalz/Saarland.</p>
+			<p>
+				One Südwest ist ein nicht eingetragener Markenname von Youth
+				Alive Rheinland-Pfalz/Saarland.
+			</p>
 
-			<p>Youth Alive Rheinland-Pfalz/Saarland ist ein Arbeitszweig des <a href="http://www.ljw-rps.de/" target="_blank">Landesjugendwerks des BFP – Region Rheinland-Pfalz und Saarland</a>.</p>
+			<p>
+				Youth Alive Rheinland-Pfalz/Saarland ist ein Arbeitszweig des <a
+					href="http://www.ljw-rps.de/"
+					target="_blank"
+					>Landesjugendwerks des BFP – Region Rheinland-Pfalz und
+					Saarland</a
+				>.
+			</p>
 
-			<p>Das Landesjugendwerk des BFP in Rheinland-Pfalz und Saarland ist Teil vom <a href="https://www.bfp.de/" target="_blank">Bund Freikirchlicher Pfingstgemeinden KdöR</a>.</p>
+			<p>
+				Das Landesjugendwerk des BFP in Rheinland-Pfalz und Saarland ist
+				Teil vom <a href="https://www.bfp.de/" target="_blank"
+					>Bund Freikirchlicher Pfingstgemeinden KdöR</a
+				>.
+			</p>
 
-			<p>Youth Alive Rheinland-Pfalz/Saarland hat als eigenständige Instanz die Inhalte dieser Webseite erstellt. Falls Ihnen Probleme mit der Webseite auffallen, informieren Sie bitte umgehend Fabian Letsch, welcher als Redaktionell Verantwortlicher weiter unten gelistet ist.</p>
+			<p>
+				Youth Alive Rheinland-Pfalz/Saarland hat als eigenständige
+				Instanz die Inhalte dieser Webseite erstellt. Falls Ihnen
+				Probleme mit der Webseite auffallen, informieren Sie bitte
+				umgehend Fabian Letsch, welcher als Redaktionell
+				Verantwortlicher weiter unten gelistet ist.
+			</p>
 		</section>
 
 		<section>
@@ -41,61 +62,111 @@ const href = '/impressum';
 
 			<h4>Rechtsbezeichnung des Landesjugendwerks</h4>
 			<p>
-				Bund Freikirchlicher Pfingstgemeinden, K.d.ö.R; (BFP)<br>
-				Landesjugendwerk des BFP, Region Rheinland-Pfalz/Saarland<br>
+				Bund Freikirchlicher Pfingstgemeinden, K.d.ö.R; (BFP)<br />
+				Landesjugendwerk des BFP, Region Rheinland-Pfalz/Saarland<br />
 				Anerkannter Träger der freien Jugendhilfe
 			</p>
 
 			<h4>Adresse</h4>
 			<p>
-				Bund Freikirchlicher Pfingstgemeinden KdöR<br>
-				Industriestraße 6-8<br>
-				64390 Erzhausen<br>
+				Bund Freikirchlicher Pfingstgemeinden KdöR<br />
+				Industriestraße 6-8<br />
+				64390 Erzhausen<br />
 				Deutschland
 			</p>
 
-			<h4>Rechtlicher Vertreter des Landesjugendwerks des BFP – Region Rheinland-Pfalz und Saarland</h4>
+			<h4>
+				Rechtlicher Vertreter des Landesjugendwerks des BFP – Region
+				Rheinland-Pfalz und Saarland
+			</h4>
 			<p>
-				David Sindhu<br>
-				Telefon: <HiddenField fieldValue="06763-309853" /><br>
+				David Sindhu<br />
+				Telefon: <HiddenField fieldValue="06763-309853" /><br />
 				E-Mail: <HiddenField fieldValue="david.sindhu@ljw-rps.de" />
 			</p>
 
-			<h4>Rechtlicher Vertreter von Youth Alive Rheinland-Pfalz/Saarland</h4>
+			<h4>
+				Rechtlicher Vertreter von Youth Alive Rheinland-Pfalz/Saarland
+			</h4>
 			<p>
-				Jan Nikel<br>
-				Telefon: <HiddenField fieldValue="+49 176 70596308" /><br>
+				Jan Nikel<br />
+				Telefon: <HiddenField fieldValue="+49 176 70596308" /><br />
 				E-Mail: <HiddenField fieldValue="jan@onesw.de" />
 			</p>
 
 			<h4>Redaktionell Verantwortlicher</h4>
 			<p>
-				Fabian Letsch<br>
-				Trierer Straße 154<br>
-				56072 Koblenz<br>
-				<br>
-				Telefon: <HiddenField fieldValue="+49 163 1409 701" /><br>
+				Fabian Letsch<br />
+				Trierer Straße 154<br />
+				56072 Koblenz<br />
+				<br />
+				Telefon: <HiddenField fieldValue="+49 163 1409 701" /><br />
 				E-Mail: <HiddenField fieldValue="fabian@onesw.de" />
 			</p>
 		</section>
 
 		<section>
 			<h2>Haftung für Inhalte</h2>
-			<p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu 2 / 4 forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+			<p>
+				Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
+				Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+				verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+				Diensteanbieter jedoch nicht verpflichtet, übermittelte oder
+				gespeicherte fremde Informationen zu überwachen oder nach
+				Umständen zu 2 / 4 forschen, die auf eine rechtswidrige
+				Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder
+				Sperrung der Nutzung von Informationen nach den allgemeinen
+				Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung
+				ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
+				Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
+				Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+			</p>
 		</section>
 
 		<section>
 			<h2>Haftung für Links</h2>
-			<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+			<p>
+				Unser Angebot enthält Links zu externen Websites Dritter, auf
+				deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
+				diese fremden Inhalte auch keine Gewähr übernehmen. Für die
+				Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
+				oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
+				wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
+				überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der
+				Verlinkung nicht erkennbar. Eine permanente inhaltliche
+				Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+				Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei
+				Bekanntwerden von Rechtsverletzungen werden wir derartige Links
+				umgehend entfernen.
+			</p>
 		</section>
 
 		<section>
 			<h2>Urheberrecht</h2>
-			<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+			<p>
+				Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+				diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+				Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+				Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
+				schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+				Downloads und Kopien dieser Seite sind nur für den privaten,
+				nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf
+				dieser Seite nicht vom Betreiber erstellt wurden, werden die
+				Urheberrechte Dritter beachtet. Insbesondere werden Inhalte
+				Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+				Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
+				entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
+				werden wir derartige Inhalte umgehend entfernen.
+			</p>
 		</section>
 
 		<section>
-			<p>Dieses Impressum wurde Teilweise mit der Hilfe von <a href="https://www.e-recht24.de/" target="_blank" >www.e-recht24.de</a> erstellt.</p>
+			<p>
+				Dieses Impressum wurde Teilweise mit der Hilfe von <a
+					href="https://www.e-recht24.de/"
+					target="_blank">www.e-recht24.de</a
+				> erstellt.
+			</p>
 		</section>
-		</TextContent>
+	</TextContent>
 </Html>
