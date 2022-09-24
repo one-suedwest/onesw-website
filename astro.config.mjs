@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://clever-pothos-e6b088.netlify.app/',
+  site: 'https://www.onesw.de/',
   experimental: {
     integrations: true
   },
