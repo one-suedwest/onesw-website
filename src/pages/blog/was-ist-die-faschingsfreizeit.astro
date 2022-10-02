@@ -1,0 +1,47 @@
+---
+import Html from "../../layouts/Html.astro";
+
+import Navigation from "../../components/Navigation.astro";
+import HeaderImage from "../../components/HeaderImage.astro";
+import TextContent from "../../components/TextContent.astro";
+import OneLogoWithText from "../../components/svg/OneLogoWithText.astro";
+import HiddenField from "../../components/HiddenField.astro";
+
+const href = "/";
+---
+
+<Html
+	title="One Südwest - Jugendliche für Jesus und seine Gemeinde begeistern"
+	description="One Südwest, auch bekannt als Youth Alive RPS, ist die Landesjugendarbeit des BFP in Rheinland-Pfalz und Saarland."
+	pageUrl="https://onesw.de"
+	ogTitle="One Südwest"
+	ogDescription="Jugendliche von Jesus und seiner Gemeinde begeistern."
+	ogImage="/og-image.jpeg"
+	imageAlt="Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das One Südwest Logo"
+	siteName="One Südwest"
+	twitterImage="/twitter-image.webp"
+	updatedTime="2022-09-24T09:20:17.492Z"
+	href={href}
+>
+	<Navigation href={href} />
+	<HeaderImage
+		srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
+			.map(
+				(width) => `/images/index_header-image/${width}.webp ${width}w`
+			)
+			.join(", ")}
+		centerImage={true}
+		alt="Kopfbild - Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das One Südwest Logo"
+		position="80% 40%"
+	>
+		<OneLogoWithText />
+	</HeaderImage>
+	<TextContent
+		backgroundColor="var(--background-color)"
+		bottomTransitionColor="var(--dark-background-color)"
+	>
+		<h1></h1>
+		<p>
+		</p>
+	</TextContent>
+</Html>
