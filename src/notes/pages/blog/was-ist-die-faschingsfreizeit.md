@@ -4,6 +4,8 @@ Die Faschingsfreizeit findet jedes Jahr im Frühjahr unter einem anderen Namen s
 
 ## Was ist die Faschingsfreizeit?
 
+## Wo kann ich mich anmelden?
+
 ## Wo findet die Faschingsfreizeit statt?
 
 ## Wie funktioniert die Verpflegung?
