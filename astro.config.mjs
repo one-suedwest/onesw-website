@@ -10,9 +10,19 @@ export default defineConfig({
     integrations: true
   },
   integrations: [compress(), sitemap(), robotsTxt({
-    policy: [{
-      allow: '/',
-      userAgent: '*'
-    }]
+    policy: [
+      {
+        allow: '/',
+        userAgent: '*'
+      },
+      {
+        disallow: '/impressum',
+        userAgent: '*'
+      },
+      {
+        disallow: '/datenschutz',
+        userAgent: '*'
+      }
+    ]
   })]
 });
