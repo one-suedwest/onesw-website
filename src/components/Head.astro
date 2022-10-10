@@ -5,7 +5,6 @@ export interface Props {
     pageUrl: string;
     ogTitle: string;
     ogDescription: string;
-    siteName: string;
     updatedTime: string;
     ogImage?: string;
     twitterImage?: string;
@@ -20,7 +19,6 @@ const {
     ogDescription,
     ogImage,
     imageAlt,
-    siteName,
     updatedTime,
     twitterImage,
 } = Astro.props;
@@ -51,7 +49,7 @@ const {
     <meta property="og:title" content={ogTitle}>
     <meta property="og:description" content={ogDescription}>
     <meta property="og:url" content={pageUrl}>
-    <meta property="og:site_name" content={siteName}>
+    <meta property="og:site_name" content="One Südwest">
     {/* new Date().toISOString() */}
     <meta property="og:updated_time" content={updatedTime}>
 
