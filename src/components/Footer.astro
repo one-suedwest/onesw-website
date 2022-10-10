@@ -8,19 +8,6 @@ const {
     href,
 } = Astro.props;
 ---
-<div class="footer">
-    <Transition
-        color="var(--dark-background-color)"
-    />
-    <div class="footer-content">
-        <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
-        <div class="footer-navigation">
-            <a class="navigation-link" href="/impressum" title="Rechtliche Informationen" data-active={href === '/impressum'}>Impressum</a>
-            <a class="navigation-link" href="/datenschutz" title="Datenschutz Informationen" data-active={href === '/datenschutz'}>Datenschutz</a>
-        </div>
-    </div>
-</div>
-
 <style is:inline>
     .footer {
         position: absolute;
@@ -63,9 +50,18 @@ const {
         .footer-navigation {
             display: contents;
         }
-
-        .copyright, .navigation-link {
-            font-size: 18px;
-        }
     }
 </style>
+
+<div class="footer">
+    <Transition
+        color="var(--dark-background-color)"
+    />
+    <div class="footer-content">
+        <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
+        <div class="footer-navigation">
+            <a class="navigation-link" href="/impressum" title="Rechtliche Informationen" data-active={href === '/impressum'}>Impressum</a>
+            <a class="navigation-link" href="/datenschutz" title="Datenschutz Informationen" data-active={href === '/datenschutz'}>Datenschutz</a>
+        </div>
+    </div>
+</div>

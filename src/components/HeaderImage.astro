@@ -18,25 +18,6 @@ const {
 } = Astro.props;
 ---
 
-<div class="wrapper">
-    <img
-        srcset={srcset}
-        alt={alt}
-        class="header-image"
-        style={`object-position: ${position}`}
-    />
-    {centerImage && (
-        <div class="center-image">
-            <slot />
-        </div>
-    )}
-    <div class="bottom-transition">
-        <Transition
-            color={bottomTransitionColor}
-        />
-    </div>
-</div>
-
 <style is:inline>
     .wrapper {
         width: 100%;
@@ -68,3 +49,22 @@ const {
         width: 100%;
     }
 </style>
+
+<div class="wrapper">
+    <img
+        srcset={srcset}
+        alt={alt}
+        class="header-image"
+        style={`object-position: ${position}`}
+    />
+    {centerImage && (
+        <div class="center-image">
+            <slot />
+        </div>
+    )}
+    <div class="bottom-transition">
+        <Transition
+            color={bottomTransitionColor}
+        />
+    </div>
+</div>

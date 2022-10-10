@@ -1,0 +1,40 @@
+---
+export interface Props {
+    href: string;
+    text: string;
+}
+
+const {
+    href,
+    text,
+} = Astro.props;
+---
+
+<style>
+    div {
+        width: 100%;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        padding: 20px;
+        background-color: var(--dark-highlight-color);
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        filter: saturate(150%);
+        text-align: center;
+    }
+    
+    a:hover {
+        filter: saturate(100%) brightness(160%);
+    }
+</style>
+
+<div>
+    <a href={href} download>{text}</a>
+</div>

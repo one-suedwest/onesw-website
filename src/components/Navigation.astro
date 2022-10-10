@@ -10,69 +10,6 @@ const {
     href
 } = Astro.props;
 ---
-<div class="navigation">
-    <div class="top-bar">
-        <nav class="top-bar-nav">
-            <a href="/" title="Startseite">
-                <OneLogoSmall />
-            </a>
-            <div class="desktop-navigation">
-                <a class="navigation-link" href="/" data-active={href === '/'}>Startseite</a>
-                <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a>
-                <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Über Paypal an uns spenden">Spenden</a>
-                <a href="https://www.instagram.com/onemovementsw/" target="_blank" title="Unsere Instagram Seite"><Instagram /></a>
-                <a href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Unser YouTube-Kanal"><YouTube /></a>
-            </div>
-            <div class="burger-menu">
-                <div class="burger burger-icon show">
-                    <svg width="26" height="26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="2" y="3" width="22" height="4" rx="2" />
-                        <rect x="2" y="11" width="22" height="4" rx="2" />
-                        <rect x="2" y="19" width="22" height="4" rx="2" />
-                    </svg>
-                </div>
-                <div class="x burger-icon">
-                    <svg width="26" height="26" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m4 5 18 16M4 21 22 5" stroke-width="4" stroke-linecap="round"/>
-                    </svg>
-                </div>
-            </div>
-        </nav>
-    </div>
-    
-    <div class="mobile-navigation">
-        <nav>
-            <a class="navigation-link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
-            <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a>
-            <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Über Paypal an uns spenden">Spenden</a>
-            <a class="navigation-link" href="https://www.instagram.com/onemovementsw/" target="_blank" title="Unsere Instagram Seite">Instagram</a>
-            <a class="navigation-link" href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Unser YouTube-Kanal">Youtube</a>
-        </nav>
-    </div>
-</div>
-
-<script>
-    const burgerMenu = document.querySelector('.burger-menu');
-
-    const burgerIcon = document.querySelector('.burger-menu .burger');
-    const xIcon = document.querySelector('.burger-menu .x');
-
-    burgerMenu!.addEventListener('click', () => {
-        const mobileNavigationOpenElement = document.querySelector('.mobile-navigation.open');
-
-        if (mobileNavigationOpenElement !== null) {
-            mobileNavigationOpenElement.classList.remove('open');
-            burgerIcon!.classList.add('show');
-            xIcon!.classList.remove('show');
-        } else {
-            const mobileNavigation = document.querySelector('.mobile-navigation');
-            mobileNavigation!.classList.add('open');
-            burgerIcon!.classList.remove('show');
-            xIcon!.classList.add('show');
-        }
-    });
-</script>
-
 <style is:inline>
     .top-bar {
         height: 64px;
@@ -167,3 +104,68 @@ const {
         }
     }
 </style>
+
+<div class="navigation">
+    <div class="top-bar">
+        <nav class="top-bar-nav">
+            <a href="/" title="Startseite">
+                <OneLogoSmall />
+            </a>
+            <div class="desktop-navigation">
+                <a class="navigation-link" href="/" data-active={href === '/'}>Startseite</a>
+                <a class="navigation-link" href="/warum-juleica" data-active={href === '/warum-juleica'}>Juleica</a>
+                <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a>
+                <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Über Paypal an uns spenden">Spenden</a>
+                <a href="https://www.instagram.com/onemovementsw/" target="_blank" title="Unsere Instagram Seite"><Instagram /></a>
+                <a href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Unser YouTube-Kanal"><YouTube /></a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger burger-icon show">
+                    <svg width="26" height="26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="22" height="4" rx="2" />
+                        <rect x="2" y="11" width="22" height="4" rx="2" />
+                        <rect x="2" y="19" width="22" height="4" rx="2" />
+                    </svg>
+                </div>
+                <div class="x burger-icon">
+                    <svg width="26" height="26" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m4 5 18 16M4 21 22 5" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="mobile-navigation">
+        <nav>
+            <a class="navigation-link" href="/" title="Startseite" data-active={href === '/'}>Startseite</a>
+            <a class="navigation-link" href="/warum-juleica" title="Wofür braucht man eine Juleica?" data-active={href === '/warum-juleica'}>Juleica</a>
+            <a class="navigation-link" href="https://one-movement.de/leadership/" target="_blank" title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a>
+            <a class="navigation-link" href="https://www.paypal.com/paypalme/onesw" target="_blank" title="Über Paypal an uns spenden">Spenden</a>
+            <a class="navigation-link" href="https://www.instagram.com/onemovementsw/" target="_blank" title="Unsere Instagram Seite">Instagram</a>
+            <a class="navigation-link" href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA" target="_blank" title="Unser YouTube-Kanal">Youtube</a>
+        </nav>
+    </div>
+</div>
+
+<script>
+    const burgerMenu = document.querySelector('.burger-menu');
+
+    const burgerIcon = document.querySelector('.burger-menu .burger');
+    const xIcon = document.querySelector('.burger-menu .x');
+
+    burgerMenu!.addEventListener('click', () => {
+        const mobileNavigationOpenElement = document.querySelector('.mobile-navigation.open');
+
+        if (mobileNavigationOpenElement !== null) {
+            mobileNavigationOpenElement.classList.remove('open');
+            burgerIcon!.classList.add('show');
+            xIcon!.classList.remove('show');
+        } else {
+            const mobileNavigation = document.querySelector('.mobile-navigation');
+            mobileNavigation!.classList.add('open');
+            burgerIcon!.classList.remove('show');
+            xIcon!.classList.add('show');
+        }
+    });
+</script>

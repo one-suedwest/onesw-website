@@ -77,7 +77,6 @@ const {
             font-family: 'Teko';
             font-style: normal;
             font-weight: 600;
-            font-display: swap;
             src: url(/fonts/teko-normal-600.woff2) format('woff2');
         }
 
@@ -85,7 +84,6 @@ const {
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 400;
-            font-display: swap;
             src: url(/fonts/montserrat-normal-400.woff2) format('woff2');
         }
 
@@ -93,10 +91,17 @@ const {
             --background-color: #2a2a2a;
             --highlight-color: #ff6d6d;
             --light-highlight-color: #ff9999;
-            --font-color: #fff;
+            --dark-highlight-color: #8c2323;
+            --font-color: #eee;
             --dark-background-color: #000;
             --important-color: #99cc00;
             --footer-height: 170px;
+        }
+
+        @media (max-width: 700px) {
+            :root {
+                --footer-height: 210px;
+            }
         }
 
         body {
@@ -123,18 +128,18 @@ const {
             max-width: 900px;
         }
 
-        .text-content section {
+        :where(.text-content) section {
             margin: 56px 0;
         }
 
-        .text-content h1 {
+        :where(.text-content) h1 {
             color: var(--font-color);
             font-family: 'Teko', sans-serif;
             font-size: 54px;
             margin: 0;
         }
 
-        .text-content h2 {
+        :where(.text-content) h2 {
             color: var(--font-color);
             font-family: 'Teko', sans-serif;
             font-size: 36px;
@@ -142,7 +147,7 @@ const {
             margin: 0;
         }
 
-        .text-content h3 {
+        :where(.text-content) h3 {
             color: var(--font-color);
             font-family: 'Teko', sans-serif;
             font-size: 28px;
@@ -151,7 +156,7 @@ const {
             margin-bottom: -12px;
         }
 
-        .text-content h4 {
+        :where(.text-content) h4 {
             color: var(--light-highlight-color);
             font-family: 'Teko', sans-serif;
             font-size: 22px;
@@ -160,14 +165,14 @@ const {
             margin-top: 16px;
         }
 
-        .text-content p, .text-content li {
+        :where(.text-content) p, :where(.text-content) li {
             color: var(--font-color);
             font-family: 'Montserrat', sans-serif;
             margin: 16px 0;
             font-size: 18px;
         }
 
-        .text-content a {
+        :where(.text-content) a {
             color: var(--light-highlight-color);
             font-family: 'Montserrat', sans-serif;
             font-size: 18px;

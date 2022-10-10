@@ -1,6 +1,6 @@
 # FAQ zur Faschingsfreizeit
 
-Die Faschingsfreizeit findet jedes Jahr im Frühjahr unter einem anderen Namen statt. Hier möchte ich dir erklären was einen Jugendlichen auf der Faschingsfreizeit erwartet. Dieser Artikel wurde für Jugendliche, Eltern und Jugendleiter geschrieben.
+Die Faschingsfreizeit findet jedes Jahr im Frühjahr statt. Hier möchte ich dir erklären was einen Jugendlichen auf der Faschingsfreizeit erwartet. Dieser Artikel wurde für Jugendliche, Eltern und Jugendleiter geschrieben.
 
 ## Was ist die Faschingsfreizeit?
 
@@ -33,6 +33,8 @@ Die Faschingsfreizeit findet jedes Jahr im Frühjahr unter einem anderen Namen s
 ## Wird die Faschingsfreizeit livegestreamt?
 
 ## Werden Fotos und Videos gemacht? Wofür werden diese verwendet?
+
+## Wie stellt ihr sicher, dass die Kinder, die nicht auf Fotos & Videos dürfen, nicht trotzdem in diesen auftauchen?
 
 ## Wie funktioniert das mit dem Duschen?
 
@@ -86,8 +88,6 @@ Die Faschingsfreizeit findet jedes Jahr im Frühjahr unter einem anderen Namen s
 
 ## Gibt es Merch?
 
-## Ich habe Fragen die hier nicht beantwortet wurden, wo kann ich diese stellen?
-
 ## Wie geht ihr mit Corona um?
 
 ## Brauche ich eine Maske?
@@ -98,4 +98,6 @@ Die Faschingsfreizeit findet jedes Jahr im Frühjahr unter einem anderen Namen s
 
 ## Darf man das Gelände verlassen?
 
-## 
+## Was muss man bei einem medizinischen Notfall machen?
+
+
