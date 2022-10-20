@@ -32,10 +32,11 @@ const href = "/behold";
         centerImage={true}
         alt="BEHOLD Faschi 17.02.2023 - 21.02.2023 in Grünstadt von one südwest"
         position="100% 50%"
+        bottomTransitionColor="var(--dark-background-color)"
     >
         <style is:inline>
             #header-image-middle {
-                background-image: url("./images/behold_header-image/middle.webp");
+                background-image: url("/images/behold_header-image/middle.webp");
                 width: 100%;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -46,7 +47,7 @@ const href = "/behold";
 
             @media (max-width: 740px) {
                 #header-image-middle {
-                    background-image: url("./images/behold_header-image/middle_mobile.webp");
+                    background-image: url("/images/behold_header-image/middle_mobile.webp");
                     height: min(600px, 50vh);
                 }
             }
@@ -54,7 +55,7 @@ const href = "/behold";
         <div id="header-image-middle"></div>
     </HeaderImage>
     <TextContent
-        backgroundColor="var(--background-color)"
+        backgroundColor="var(--dark-background-color)"
         showBottomTransition={true}
         bottomTransitionColor="white"
     >
