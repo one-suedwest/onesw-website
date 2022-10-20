@@ -1,0 +1,79 @@
+---
+import Html from "../layouts/Html.astro";
+
+import Navigation from "../components/Navigation.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import TextContent from "../components/TextContent.astro";
+import OneLogoWithText from "../components/svg/OneLogoWithText.astro";
+import HiddenField from "../components/HiddenField.astro";
+
+const href = "/behold";
+---
+
+<Html
+    title="BEHOLD - Faschingsfreizeit 2023 | One Südwest"
+    description="Anmeldung für die BEHOLD Faschingsfreizeit von 17.02. - 21.02.2023 in Grünstadt"
+    pageUrl="https://www.onesw.de/behold"
+    ogTitle="BEHOLD | Faschingsfreizeit 2023"
+    ogDescription="BEHOLD Faschingsfreizeit 17.02. - 21.02.2023 in Grünstadt"
+    ogImage="/og-image-behold.jpeg"
+    imageAlt="BEHOLD Faschi 17.02.2023 - 21.02.2023 in Grünstadt von one südwest"
+    twitterImage="/twitter-image-behold.webp"
+    updatedTime="2022-10-20T19:55:26.330Z"
+    href={href}
+>
+    <Navigation href={href} />
+    <HeaderImage
+        srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
+            .map(
+                (width) => `/images/behold_header-image/${width}.webp ${width}w`
+            )
+            .join(", ")}
+        centerImage={true}
+        alt="BEHOLD Faschi 17.02.2023 - 21.02.2023 in Grünstadt von one südwest"
+        position="100% 50%"
+    >
+        <style is:inline>
+            #header-image-middle {
+                background-image: url("./images/behold_header-image/middle.webp");
+                width: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: min(420px, 60vh);
+                background-position: 50%;
+                transform: translateY(-5vh);
+            }
+
+            @media (max-width: 740px) {
+                #header-image-middle {
+                    background-image: url("./images/behold_header-image/middle_mobile.webp");
+                    height: min(600px, 50vh);
+                }
+            }
+        </style>
+        <div id="header-image-middle"></div>
+    </HeaderImage>
+    <TextContent
+        backgroundColor="var(--background-color)"
+        showBottomTransition={true}
+        bottomTransitionColor="white"
+    >
+        <h1>BEHOLD - Faschingsfreizeit</h1>
+        <h2>Von 17.02. - 21.02.2023</h2>
+        <p>
+            Dieses Jahr findet die Faschingsfreizeit vom 17.02. - 21.02. wie gewohnt wieder in
+            Grünstadt unter dem Namen BEHOLD statt.
+
+            Alle nötigen Infos findest du in den AGB
+        </p>
+    </TextContent>
+    <iframe
+        width="100%"
+        style="border-width:0px; background-color: white; display: block;"
+        height="1000px"
+        src="https://yarps.church.tools/publicgroup/205?embedded=true"
+    >
+    </iframe>
+    <div style="height: 80px; margin-bottom: -80px; background-color: white">
+    </div>
+</Html>
