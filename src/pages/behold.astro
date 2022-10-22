@@ -4,7 +4,7 @@ import Html from "../layouts/Html.astro";
 import Navigation from "../components/Navigation.astro";
 import HeaderImage from "../components/HeaderImage.astro";
 import TextContent from "../components/TextContent.astro";
-import OneLogoWithText from "../components/svg/OneLogoWithText.astro";
+import DownloadCTA from "../components/DownloadCTA.astro";
 import HiddenField from "../components/HiddenField.astro";
 
 const href = "/behold";
@@ -19,7 +19,7 @@ const href = "/behold";
     ogImage="/og-image-behold.jpeg"
     imageAlt="BEHOLD Faschi 17.02.2023 - 21.02.2023 in Grünstadt von one südwest"
     twitterImage="/twitter-image-behold.webp"
-    updatedTime="2022-10-20T19:55:26.330Z"
+    updatedTime="2022-10-22T10:14:00.315Z"
     href={href}
 >
     <Navigation href={href} />
@@ -60,23 +60,83 @@ const href = "/behold";
         bottomTransitionColor="white"
     >
         <h1>BEHOLD - Faschingsfreizeit</h1>
-        <h2>Von 17.02. - 21.02.2023</h2>
-        <p>
-            Dieses Jahr findet die Faschingsfreizeit vom 17.02. - 21.02. wie gewohnt wieder in
-            Grünstadt unter dem Namen BEHOLD statt.
-
-            Alle nötigen Infos findest du in den AGB
-        </p>
+        <h2>Von 17.02. - 21.02.2023 in Grünstadt</h2>
+        <section>
+            <p>
+                BEHOLD! Endlich wieder Faschi! Schnapp dir deine Sachen und komm
+                nach Grünstadt!
+            </p>
+            <p>
+                Fünf Tage Begegnung mit Gott und deinen Freunden aus ganz
+                Rheinland-Pfalz und Saarland! Unsere letzte vor Ort
+                Faschingsfreizeit war 2020, deshalb ist es mega, dass wir uns
+                endlich wieder treffen können.
+            </p>
+            <p>
+                Auf dich warten inspirierende Sprecher, hammer Workshops,
+                lebensverändernde Kleingruppenzeiten, tiefer Worship und eine
+                große Menge Spaß!
+            </p>
+        </section>
+        <section>
+            <h2>Zahlung der Teilnehmergebühr</h2>
+            <p>
+                Die Teilnehmergebühr muss zeitgleich mit der Anmeldung
+                überwiesen werden.<br />
+                Weitere Infos dazu in den AGB.
+            </p>
+            <h3>SUPER EARLY BIRD</h3>
+            <p>
+                Bei Anmeldung (und Zahlung des TN-Betrages)<br />
+                bis zum 31.11.2022 = € 99,-
+            </p>
+            <h3>EARLY BIRD</h3>
+            <p>
+                Bei Anmeldung (und Zahlung des TN-Betrages)<br />
+                bis zum 31.12.2022 = € 119,-
+            </p>
+            <h3>Standard Ticket</h3>
+            <p>ab dem 01.01.2023 = € 129,-</p>
+            <p>
+                Geschwisterkinder erhalten bei zeitgleicher Anmeldung bis zum
+                01.02.2023 eine Ermäßigung. Der Teilnehmerbetrag beträgt in
+                diesem Fall ab dem 1. Geschwisterkind € 89 pro Kind.
+            </p>
+            <p>
+                Familien mit SGB II – Bezug melden sich bitte bei Jan: <HiddenField
+                    prefixValue="+49 176 "
+                    suffixValue="705 96 308"
+                />
+            </p>
+        </section>
+        <section>
+            <h2>BITTE UNBEDINGT LESEN</h2>
+            <p>
+                Lies aber bitte unbedingt die Allgemeinen Geschäftsbedingungen
+                zusammen mit deinen Eltern durch, keine Angst, das ist nicht das
+                typische BLABLA was du weg klickst, wenn du ein Programm
+                installierst oder dich irgendwo anmeldest, sondern tatsächlich
+                wichtige Informationen rund um die Freizeit welche du von deinen
+                Eltern unterschrieben zur BEHOLD mitbringen musst.
+            </p>
+            <p>Weiter unten findest du die Anmeldung.</p>
+            <DownloadCTA
+                href="/freizeitregeln-agb-behold.pdf"
+                text="Freizeitregeln/AGB herunterladen"
+            />
+        </section>
     </TextContent>
-    <iframe
-        width="100%"
-        style="border-width:0px; background-color: white; display: block;"
-        height="1000px"
-        src="https://yarps.church.tools/publicgroup/205?embedded=true"
-        title="Anmeldung zur Faschingsfreizeit über church tools"
-        loading="lazy"
-    >
-    </iframe>
+    <div style="padding: min(30vh, 140px) 20px; background-color: white;">
+        <iframe
+            width="100%"
+            style="border-width:0px; display: block;"
+            height="1000px"
+            src="https://yarps.church.tools/publicgroup/205?embedded=true"
+            title="Anmeldung zur Faschingsfreizeit über church tools"
+            loading="lazy"
+        >
+        </iframe>
+    </div>
     <div style="height: 80px; margin-bottom: -80px; background-color: white">
     </div>
 </Html>
