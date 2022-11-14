@@ -8,22 +8,5 @@ const {
     prefixValue,
     suffixValue,
 } = Astro.props;
-
-const identifier = Math.round(Math.random()*100000000);
 ---
-<span data-identifier={identifier} style="color: var(--light-highlight-color)">Wird angezeigt in 10 Sekunden</span>
-
-<script defer define:vars={{ identifier, prefixValue, suffixValue }}>
-    const el = document.querySelector(`[data-identifier="${identifier}"`);
-    let counter = 10;
-
-    const interval = setInterval(() => {
-        counter--;
-        el.innerHTML = `Wird angezeigt in ${counter} Sekunden.`;
-        if (counter === 0) {
-            el.innerHTML = `${prefixValue}${suffixValue}`.split('').map(x => '<span>' + x + '</span>').join('');
-            el.style.color = 'var(--font-color)';
-            clearInterval(interval);
-        }
-    }, 1000);
-</script>
+<span data-hidden-field style="color: var(--light-highlight-color)" data-prefix={prefixValue} data-suffix={suffixValue}>Wird angezeigt in 10 Sekunden</span>
