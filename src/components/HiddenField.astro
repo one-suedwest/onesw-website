@@ -13,7 +13,7 @@ const identifier = Math.round(Math.random()*100000000);
 ---
 <span data-identifier={identifier} style="color: var(--light-highlight-color)">Wird angezeigt in 10 Sekunden</span>
 
-<script is:inline define:vars={{ identifier, prefixValue, suffixValue }}>
+<script defer define:vars={{ identifier, prefixValue, suffixValue }}>
     const el = document.querySelector(`[data-identifier="${identifier}"`);
     let counter = 10;
 
