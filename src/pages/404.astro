@@ -1,0 +1,55 @@
+---
+import Html from "../layouts/Html.astro";
+
+import Navigation from "../components/Navigation.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import TextContent from "../components/TextContent.astro";
+import OneLogoWithText from "../components/svg/OneLogoWithText.astro";
+import HiddenField from "../components/HiddenField.astro";
+
+const href = "/404";
+---
+
+<Html
+	title="Diese Seite existiert nicht"
+	href={href}
+>
+	<Navigation href={href} />
+    <style>
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* 100vh - Header - Footer seperator - Footer */
+            height: calc(100vh - 64px - 130px - 80px);
+            width: 100%;
+        }
+
+        .wrapper img {
+            max-width: 80vw;
+        }
+
+        .wrapper div {
+            font-family: "Teko", sans-serif;
+            color: var(--font-color);
+            font-size: 38px;
+        }
+
+        @media (min-width: 701px) {
+            .wrapper {
+                height: calc(100vh - 64px - 90px - 80px);
+            }
+        }
+
+        @media (min-width: 920px) {
+            .wrapper {
+                height: calc(100vh - 100px - 90px - 80px);
+            }
+        }
+    </style>
+    <div class="wrapper">
+        <img src="/grab.svg" />
+        <div>404 - Nicht Gefunden</div>
+    </div>
+</Html>

@@ -2,14 +2,15 @@
 // new Date().toISOString()
 export interface Props {
 	title: string;
-    description: string;
-    pageUrl: string;
-    ogTitle: string;
-    ogDescription: string;
-    updatedTime: string;
+    description?: string;
+    pageUrl?: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    updatedTime?: string;
     ogImage?: string;
     twitterImage?: string;
     imageAlt?: string;
+    index?: boolean;
 }
 
 const {
@@ -22,19 +23,16 @@ const {
     imageAlt,
     updatedTime,
     twitterImage,
+    index = true,
 } = Astro.props;
 ---
 
 <head>
-    {/* standard */}
+    {/* Standard */}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta name="description" content={description}>
-    <link rel="canonical" href={pageUrl}>
-    <link rel="shortlink" href={pageUrl}>
-
     {/* theming */}
     <meta name="theme-color" content="#000000">
     <link rel="icon" href="/favicon.svg">
@@ -44,33 +42,42 @@ const {
     {/* https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag */}
     <meta name="robots" content="max-image-preview:large">
 
-    {/* Facebook */}
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content={ogTitle}>
-    <meta property="og:description" content={ogDescription}>
-    <meta property="og:url" content={pageUrl}>
-    <meta property="og:site_name" content="One Südwest">
-    {/* new Date().toISOString() */}
-    <meta property="og:updated_time" content={updatedTime}>
-
-    {ogImage && imageAlt && (
-        <meta property="og:image" content={ogImage}>
-        <meta property="og:image:secure_url" content={ogImage}>
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <meta property="og:image:alt" content={imageAlt}>
-        <meta property="og:image:type" content="image/jpeg">
-    )}
-
-    {/* Twitter */}
-    <meta name="twitter:title" content={ogTitle}>
-    <meta name="twitter:creator" content="@FabianLetsch">
-    <meta name="twitter:description" content={ogDescription}>
-    {twitterImage && imageAlt && (
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content={twitterImage}>
-        <meta name="twitter:image:alt" content={imageAlt}>
+    {index && (
+        <>
+            {/* Standard */}
+            <meta name="description" content={description}>
+            <link rel="canonical" href={pageUrl}>
+            <link rel="shortlink" href={pageUrl}>
+        
+            {/* Facebook */}
+            <meta property="og:locale" content="de_DE">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content={ogTitle}>
+            <meta property="og:description" content={ogDescription}>
+            <meta property="og:url" content={pageUrl}>
+            <meta property="og:site_name" content="One Südwest">
+            {/* new Date().toISOString() */}
+            <meta property="og:updated_time" content={updatedTime}>
+        
+            {ogImage && imageAlt && (
+                <meta property="og:image" content={ogImage}>
+                <meta property="og:image:secure_url" content={ogImage}>
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content={imageAlt}>
+                <meta property="og:image:type" content="image/jpeg">
+            )}
+        
+            {/* Twitter */}
+            <meta name="twitter:title" content={ogTitle}>
+            <meta name="twitter:creator" content="@FabianLetsch">
+            <meta name="twitter:description" content={ogDescription}>
+            {twitterImage && imageAlt && (
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:image" content={twitterImage}>
+                <meta name="twitter:image:alt" content={imageAlt}>
+            )}
+        </>
     )}
 
     <style is:inline>
