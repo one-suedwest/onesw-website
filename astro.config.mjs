@@ -22,6 +22,10 @@ export default defineConfig({
       {
         disallow: '/datenschutz',
         userAgent: '*'
+      },
+      {
+        disallow: '/pdf/',
+        userAgent: '*'
       }
     ]
   })]
