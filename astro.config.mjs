@@ -28,6 +28,14 @@ export default defineConfig({
         userAgent: '*'
       },
       {
+        disallow: '/lead',
+        userAgent: '*'
+      },
+      {
+        disallow: '/behold',
+        userAgent: '*'
+      },
+      {
         disallow: '/404',
         userAgent: '*'
       }
