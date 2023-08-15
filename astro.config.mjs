@@ -6,9 +6,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.onesw.de/',
-  experimental: {
-    integrations: true
-  },
   integrations: [compress(), sitemap(), robotsTxt({
     policy: [
       {
