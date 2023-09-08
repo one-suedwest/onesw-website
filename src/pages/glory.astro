@@ -83,6 +83,28 @@ const href = "/glory";
         margin-bottom: -16px;
         margin-top: 16px;
       }
+
+      :where(.text-content) * {
+        word-wrap: break-word;
+      }
+
+      @media (max-width: 500px) {
+        :where(.text-content) h1 {
+          font-size: 44px;
+        }
+
+        :where(.text-content) h2 {
+          font-size: 32px;
+        }
+
+        :where(.text-content) h3 {
+          font-size: 24px;
+        }
+
+        :where(.text-content) h4 {
+          font-size: 18px;
+        }
+      }
     </style>
     <div id="header-image-middle"></div>
   </HeaderImage>
