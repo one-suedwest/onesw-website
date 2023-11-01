@@ -4,226 +4,233 @@ import YouTube from "./svg/YouTube.astro";
 import OneLogoSmall from "./svg/OneLogoSmall.astro";
 
 export interface Props {
-    href: string;
+  href: string;
 }
 const { href } = Astro.props;
 ---
 
 <style is:inline>
+  .top-bar {
+    height: 64px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--dark-background-color);
+    width: 100%;
+  }
+
+  .top-bar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .desktop-navigation {
+    display: none;
+    align-items: center;
+    line-height: 1.1;
+    gap: 40px;
+  }
+
+  .mobile-navigation {
+    display: none;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .mobile-navigation.open {
+    display: block;
+  }
+
+  .mobile-navigation nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-background-color);
+  }
+
+  .mobile-navigation a {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .burger-menu {
+    display: block;
+    color: var(--font-color);
+    height: 26px;
+    cursor: pointer;
+  }
+
+  .burger-menu:hover svg {
+    fill: var(--highlight-color);
+    stroke: var(--highlight-color);
+  }
+
+  .burger-icon {
+    display: none;
+  }
+
+  .burger-icon.show {
+    display: block;
+  }
+
+  @media (min-width: 920px) {
     .top-bar {
-        height: 64px;
-        box-sizing: border-box;
-        padding: 10px;
-        background-color: var(--dark-background-color);
-        width: 100%;
+      height: 100px;
     }
 
     .top-bar-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        padding: 0 10px;
+      padding: 0 24px;
     }
 
     .desktop-navigation {
-        display: none;
-        align-items: center;
-        line-height: 1.1;
-        gap: 40px;
+      display: flex;
     }
 
-    .mobile-navigation {
-        display: none;
-        position: absolute;
-        top: 64px;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .mobile-navigation.open {
-        display: block;
-    }
-
-    .mobile-navigation nav {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--dark-background-color);
-    }
-
-    .mobile-navigation a {
-        width: 100%;
-        height: 52px;
-        line-height: 52px;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
+    .mobile-navigation,
     .burger-menu {
-        display: block;
-        color: var(--font-color);
-        height: 26px;
-        cursor: pointer;
+      display: none !important;
     }
-
-    .burger-menu:hover svg {
-        fill: var(--highlight-color);
-        stroke: var(--highlight-color);
-    }
-
-    .burger-icon {
-        display: none;
-    }
-
-    .burger-icon.show {
-        display: block;
-    }
-
-    @media (min-width: 920px) {
-        .top-bar {
-            height: 100px;
-        }
-
-        .top-bar-nav {
-            padding: 0 24px;
-        }
-
-        .desktop-navigation {
-            display: flex;
-        }
-
-        .mobile-navigation,
-        .burger-menu {
-            display: none !important;
-        }
-    }
+  }
 </style>
 
 <div class="navigation">
-    <div class="top-bar">
-        <nav class="top-bar-nav">
-            <a href="/" title="Startseite">
-                <OneLogoSmall />
-            </a>
-            <div class="desktop-navigation">
-                <a class="navigation-link" href="/" data-active={href === "/"}
-                    >Startseite</a
-                >
-                <a
-                    class="navigation-link"
-                    href="https://yarps.church.tools/publicgroup/220"
-                    target="_blank"
-                    title="Des ONE Südwest Team Boost 2023 in Andernach">Team Boost</a
-                >
-                <a
-                    class="navigation-link"
-                    title="Wofür braucht man eine Juleica?"
-                    href="/warum-juleica"
-                    data-active={href === "/warum-juleica"}>Juleica</a
-                >
-                <a
-                    class="navigation-link"
-                    href="https://one-movement.de/leadership/"
-                    target="_blank"
-                    title="Möglichkeiten sich und sein Team zu Equippen"
-                    >Leadership</a
-                >
-                <a
-                    class="navigation-link"
-                    href="https://www.paypal.com/paypalme/onesw"
-                    target="_blank"
-                    title="Über Paypal an uns spenden">Spenden</a
-                >
-                <a
-                    href="https://www.instagram.com/onemovementsw/"
-                    target="_blank"
-                    title="Unsere Instagram Seite"
-                    ><Instagram />
-                </a>
-                <a
-                    href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
-                    target="_blank"
-                    title="Unser YouTube-Kanal"
-                    ><YouTube />
-                </a>
-            </div>
-            <div class="burger-menu">
-                <div class="burger burger-icon show">
-                    <svg
-                        width="26"
-                        height="26"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <rect x="2" y="3" width="22" height="4" rx="2"></rect>
-                        <rect x="2" y="11" width="22" height="4" rx="2"></rect>
-                        <rect x="2" y="19" width="22" height="4" rx="2"></rect>
-                    </svg>
-                </div>
-                <div class="x burger-icon">
-                    <svg
-                        width="26"
-                        height="26"
-                        stroke="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="m4 5 18 16M4 21 22 5"
-                            stroke-width="4"
-                            stroke-linecap="round"></path>
-                    </svg>
-                </div>
-            </div>
-        </nav>
-    </div>
+  <div class="top-bar">
+    <nav class="top-bar-nav">
+      <a href="/" title="Startseite">
+        <OneLogoSmall />
+      </a>
+      <div class="desktop-navigation">
+        <a class="navigation-link" href="/" data-active={href === "/"}
+          >Startseite</a
+        >
+        <a class="navigation-link" href="/glory" data-active={href === "/glory"}
+          >Faschi</a
+        >
+        <a
+          class="navigation-link"
+          href="https://yarps.church.tools/publicgroup/220"
+          target="_blank"
+          title="Des ONE Südwest Team Boost 2023 in Andernach">Team Boost</a
+        >
+        <a
+          class="navigation-link"
+          title="Wofür braucht man eine Juleica?"
+          href="/warum-juleica"
+          data-active={href === "/warum-juleica"}>Juleica</a
+        >
+        <a
+          class="navigation-link"
+          href="https://one-movement.de/leadership/"
+          target="_blank"
+          title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a
+        >
+        <a
+          class="navigation-link"
+          href="https://www.paypal.com/paypalme/onesw"
+          target="_blank"
+          title="Über Paypal an uns spenden">Spenden</a
+        >
+        <a
+          href="https://www.instagram.com/onemovementsw/"
+          target="_blank"
+          title="Unsere Instagram Seite"
+          ><Instagram />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
+          target="_blank"
+          title="Unser YouTube-Kanal"
+          ><YouTube />
+        </a>
+      </div>
+      <div class="burger-menu">
+        <div class="burger burger-icon show">
+          <svg
+            width="26"
+            height="26"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="2" y="3" width="22" height="4" rx="2"></rect>
+            <rect x="2" y="11" width="22" height="4" rx="2"></rect>
+            <rect x="2" y="19" width="22" height="4" rx="2"></rect>
+          </svg>
+        </div>
+        <div class="x burger-icon">
+          <svg
+            width="26"
+            height="26"
+            stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m4 5 18 16M4 21 22 5"
+              stroke-width="4"
+              stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-    <div class="mobile-navigation">
-        <nav>
-            <a
-                class="navigation-link"
-                href="/"
-                title="Startseite"
-                data-active={href === "/"}>Startseite</a
-            >
-            <a
-                class="navigation-link"
-                href="https://yarps.church.tools/publicgroup/220"
-                target="_blank"
-                title="Des ONE Südwest Team Boost 2023 in Andernach">Team Boost</a
-            >
-            <a
-                class="navigation-link"
-                href="/warum-juleica"
-                title="Wofür braucht man eine Juleica?"
-                data-active={href === "/warum-juleica"}>Juleica</a
-            >
-            <a
-                class="navigation-link"
-                href="https://one-movement.de/leadership/"
-                target="_blank"
-                title="Möglichkeiten sich und sein Team zu Equippen"
-                >Leadership</a
-            >
-            <a
-                class="navigation-link"
-                href="https://www.paypal.com/paypalme/onesw"
-                target="_blank"
-                title="Über Paypal an uns spenden">Spenden</a
-            >
-            <a
-                class="navigation-link"
-                href="https://www.instagram.com/onemovementsw/"
-                target="_blank"
-                title="Unsere Instagram Seite">Instagram</a
-            >
-            <a
-                class="navigation-link"
-                href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
-                target="_blank"
-                title="Unser YouTube-Kanal">Youtube</a
-            >
-        </nav>
-    </div>
+  <div class="mobile-navigation">
+    <nav>
+      <a
+        class="navigation-link"
+        href="/"
+        title="Startseite"
+        data-active={href === "/"}>Startseite</a
+      >
+      <a
+        class="navigation-link"
+        href="/glory"
+        title="Faschingsfreizeit"
+        data-active={href === "/glory"}>Faschi</a
+      >
+      <a
+        class="navigation-link"
+        href="https://yarps.church.tools/publicgroup/220"
+        target="_blank"
+        title="Des ONE Südwest Team Boost 2023 in Andernach">Team Boost</a
+      >
+      <a
+        class="navigation-link"
+        href="/warum-juleica"
+        title="Wofür braucht man eine Juleica?"
+        data-active={href === "/warum-juleica"}>Juleica</a
+      >
+      <a
+        class="navigation-link"
+        href="https://one-movement.de/leadership/"
+        target="_blank"
+        title="Möglichkeiten sich und sein Team zu Equippen">Leadership</a
+      >
+      <a
+        class="navigation-link"
+        href="https://www.paypal.com/paypalme/onesw"
+        target="_blank"
+        title="Über Paypal an uns spenden">Spenden</a
+      >
+      <a
+        class="navigation-link"
+        href="https://www.instagram.com/onemovementsw/"
+        target="_blank"
+        title="Unsere Instagram Seite">Instagram</a
+      >
+      <a
+        class="navigation-link"
+        href="https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
+        target="_blank"
+        title="Unser YouTube-Kanal">Youtube</a
+      >
+    </nav>
+  </div>
 </div>
