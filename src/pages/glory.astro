@@ -192,7 +192,7 @@ const href = "/glory";
         if (currentDate > hideDate) {
           const elementsToHide = document.querySelectorAll("[data-hide]");
           elementsToHide.forEach((element) => {
-            element.style.display = "block";
+            (element as any).style.display = "block";
           });
         }
       </script>
