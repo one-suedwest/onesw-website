@@ -111,8 +111,17 @@ const { href } = Astro.props;
         <a class="navigation-link" href="/" data-active={href === "/"}
           >Startseite</a
         >
-        <a class="navigation-link" href="/glory" data-active={href === "/glory"}
-          >Faschi</a
+        <a
+          class="navigation-link"
+          href="/glory"
+          title="Revealing Glory - Die Faschingsfreizeit 2024"
+          data-active={href === "/glory"}>Faschi</a
+        >
+        <a
+          class="navigation-link"
+          title="Die ONE Lead im Frühjahr 2024"
+          href="/lead"
+          data-active={href === "/lead"}>Lead</a
         >
         <a
           class="navigation-link"
@@ -188,6 +197,12 @@ const { href } = Astro.props;
         href="/glory"
         title="Faschingsfreizeit"
         data-active={href === "/glory"}>Faschi</a
+      >
+      <a
+        class="navigation-link"
+        title="Die ONE Lead im Frühjahr 2024"
+        href="/lead"
+        data-active={href === "/lead"}>Lead</a
       >
       <a
         class="navigation-link"

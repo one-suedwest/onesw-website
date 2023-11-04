@@ -10,122 +10,128 @@ const href = "/lead";
 ---
 
 <Html
-    title="ONESW LEAD - Leiterschaftsklausur 2023 | One Südwest"
-    description="Informationen über die ONE LEAD 2023 von 06.01. - 07.01.2023 in der DJH Oberwesel"
-    pageUrl="https://www.onesw.de/lead"
-    ogTitle="ONESW LEAD | Leiterschaftsklausur 2023"
-    ogDescription="ONESW LEAD von 06.01. - 07.01.2023 in der DJH Oberwesel"
-    ogImage="/og-image-lead.jpeg"
-    imageAlt="ONESW LEAD 06.01.2023 - 07.01.2023 in der DJH Oberwesel von one südwest"
-    twitterImage="/twitter-image-lead.webp"
-    updatedTime="2022-11-14T19:50:14.853Z"
-    href={href}
+  title="ONESW LEAD - Leiterschaftsklausur 2024 | One Südwest"
+  description="Informationen über die ONE LEAD 2024 von 12.01. - 13.01.2024 in der DJH Hochspeyer"
+  pageUrl="https://www.onesw.de/lead"
+  ogTitle="ONESW LEAD | Leiterschaftsklausur 2024"
+  ogDescription="ONESW LEAD von 12.01. - 13.01.2024 in der DJH Hochspeyer"
+  ogImage="/og-image-lead.jpeg"
+  imageAlt="ONESW LEAD 12.01.2024 - 13.01.2024 in der DJH Hochspeyer von one südwest"
+  twitterImage="/twitter-image-lead.webp"
+  updatedTime="2023-11-04T20:36:51.726Z"
+  href={href}
 >
-    <Navigation href={href} />
-    <HeaderImage
-        srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
-            .map(
-                (width) => `/images/behold_header-image/${width}.webp ${width}w`
-            )
-            .join(", ")}
-        centerImage={true}
-        alt="ONESW LEAD 06.01.2023 - 07.01.2023 in der DJH Oberwesel von one südwest"
-        position="100% 50%"
-        bottomTransitionColor="var(--background-color)"
-    >
-        <style is:inline>
-            #header-image-middle {
-                background-image: url("/images/lead_header-image/middle.webp");
-                width: 100%;
-                background-size: contain;
-                background-repeat: no-repeat;
-                height: min(420px, 60vh);
-                background-position: 50%;
-                transform: translateY(-5vh);
-            }
+  <Navigation href={href} />
+  <HeaderImage
+    srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
+      .map((width) => `/images/glory_header-image/${width}.jpeg ${width}w`)
+      .join(", ")}
+    centerImage={true}
+    alt="ONESW LEAD 12.01.2024 - 13.01.2024 in der DJH Hochspeyer von one südwest"
+    position="100% 50%"
+    bottomTransitionColor="var(--background-color)"
+  >
+    <style is:inline>
+      #header-image-middle {
+        background-image: url("/images/lead_header-image/middle.png");
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: min(500px, 60vh);
+        background-position: 50%;
+        transform: translateY(-5vh);
+      }
 
-            @media (max-width: 740px) {
-                #header-image-middle {
-                    background-image: url("/images/lead_header-image/middle_mobile.webp");
-                    height: min(600px, 50vh);
-                }
-            }
-        </style>
-        <div id="header-image-middle"></div>
-    </HeaderImage>
-    <TextContent
-        backgroundColor="var(--background-color)"
-        showBottomTransition={false}
+      @media (max-width: 740px) {
+        #header-image-middle {
+          height: min(600px, 50vh);
+        }
+      }
+    </style>
+    <div id="header-image-middle"></div>
+  </HeaderImage>
+  <TextContent
+    backgroundColor="var(--background-color)"
+    showBottomTransition={false}
+  >
+    <h1 style="word-wrap: break-word;">ONESW LEAD - Leiterschaftsklausur</h1>
+    <h2>Von 12.01. - 13.01.2024 in der DJH Hochspeyer</h2>
+    <section>
+      <p>
+        Wir laden alle Jugendleitungsteams der BFP-Gemeinden in Rheinland-Pfalz
+        und Saarland herzlich zur ONESW LEAD Leiterschaftsklausur 2024 ein.
+      </p>
+      <p>
+        Lasst euch auf der LEAD bei viel Gemeinschaft, Austausch und bei
+        mehreren Gottesdiensten ermutigen und erbauen.
+      </p>
+      <p>Dieses Jahr finden keine Wahlen statt.</p>
+    </section>
+    <section>
+      <h2>Anmeldung & Kosten</h2>
+      <p>
+        Falls du nur zum geschäftlichen Teil kommen möchtest (Wahlen /
+        Finanzbericht etc.), dann schreibe uns per
+        <HiddenField prefixValue="anmeldung" suffixValue="@onesw.de" />. Wir
+        würden das genauere dann nochmal mit dir besprechen.
+      </p>
+      <p>
+        In den Kosten enthalten sind Übernachtung und Verpflegung. Die Anmeldung
+        ist erst gültig, wenn der Beitrag überwiesen ist.
+      </p>
+      <ul>
+        <li>Mehrbettzimmer (3-4er) - € 35,- pro Person</li>
+        <li>Familienzimmer (2er) - € 45,- pro Person</li>
+        <li>Einzelbettzimmer - € 50,-</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Bankverbindung</h2>
+      <h3>YOUTH ALIVE RHEINLAND-PFALZ/SAARLAND</h3>
+      <p>
+        IBAN: DE34 5505 0120 0000 0136 64<br />
+        BIC: MALADE51MNZ<br />
+        Verwendungszweck: LEAD24 Name, Vorname
+      </p>
+    </section>
+    <section>
+      <h2>Anfahrt</h2>
+      <p>
+        Pfälzerwald-Jugendherberge<br />
+        Trippstadter Straße 150<br />
+        67691 Hochspeyer
+      </p>
+      <p>
+        <a
+          href="https://maps.app.goo.gl/VUmfqyvziS3iC5Kd7"
+          title="Google Maps Anfahrt"
+          target="_blank"
+        >
+          Google Maps
+        </a>
+      </p>
+    </section>
+    <section>
+      <h2 style="color: #b51818">BITTE UNBEDINGT LESEN</h2>
+      <p>
+        Bitte aktiviere umgehend die Bestätigungsemail, die du nach dem Absenden
+        deiner Daten erhälst. (Diese ist wegen technischer Gründe nur wenige
+        Tage gültig)
+      </p>
+      <p>Weiter unten findest du die Anmeldung.</p>
+    </section>
+  </TextContent>
+  <div style="padding: min(30vh, 140px) 20px; background-color: white;">
+    <iframe
+      width="100%"
+      style="border-width:0px; display: block;"
+      height="1000px"
+      src="https://yarps.church.tools/publicgroup/266?embedded=true"
+      title="Anmeldung zur LEAD über church tools"
+      loading="lazy"
     >
-        <h1 style="word-wrap: break-word;">ONESW LEAD - Leiterschaftsklausur</h1>
-        <h2>Von 06.01. - 07.01.2023 in der DJH Oberwesel</h2>
-        <section>
-            <p>
-                Wir laden alle Jugendleitungsteams der BFP-Gemeinden in
-                Rheinland-Pfalz und Saarland herzlich zur ONESW LEAD
-                Leiterschaftsklausur 2023 ein.
-            </p>
-            <p>
-                Lasst euch auf der LEAD bei viel Gemeinschaft, Austausch und bei
-                mehreren Gottesdiensten ermutigen und erbauen.
-            </p>
-            <p>
-                Dieses Jahr finden wieder Wahlen statt. Gewählt werden auf zwei
-                Jahre der Landesjugendleiter, Stellvertretender
-                Landesjugendleiter, Kassierer und Schriftführer. Jan Nikel,
-                Jonatas Voss und Fabian Letsch stellen sich wieder zur Wahl auf.
-                Unser Kassierer Jonas Zeiser gibt leider den Staffelstab weiter,
-                weil er nicht mehr in unserer Region aktiv ist.
-            </p>
-        </section>
-        <section>
-            <h2>Anmeldung & Kosten</h2>
-            <p>
-                Bitte melde dich und dein Team mit einer E-Mail an
-                <HiddenField prefixValue="anmeldung" suffixValue="@onesw.de" /> an.
-                Schreibe uns bitte den vollen Namen aller Personen die du mitbringst,
-                ansonsten werden wir Rückfragen stellen müssen.
-            </p>
-            <p>
-                Falls du nur zum geschäftlichen Teil kommen möchtest (Wahlen /
-                Finanzbericht etc.), dann schreibe uns per
-                <HiddenField prefixValue="anmeldung" suffixValue="@onesw.de" />.
-                Wir würden das genauere dann nochmal mit dir besprechen.
-            </p>
-            <p>
-                In den Kosten enthalten sind Übernachtung und Verpflegung. Die
-                Anmeldung ist erst gültig, wenn der Beitrag überwiesen ist.
-            </p>
-            <ul>
-                <li>Mehrbettzimmer - € 39,-</li>
-                <li>Einzelbettzimmer - € 50,-</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Bankverbindung</h2>
-            <h3>YOUTH ALIVE RHEINLAND-PFALZ/SAARLAND</h3>
-            <p>
-                IBAN: DE34 5505 0120 0000 0136 64<br />
-                BIC: MALADE51MNZ<br />
-                Verwendungszweck: LEAD23 Name, Vorname
-            </p>
-        </section>
-        <section>
-            <h2>Anfahrt</h2>
-            <p>
-                Rheintal-Jugendherberge Oberwesel<br />
-                Auf dem Schönberg<br />
-                55430 Oberwesel
-            </p>
-            <p>
-                <a
-                    href="https://goo.gl/maps/4Q46SXzQcLuPZnEFA"
-                    title="Google Maps Anfahrt"
-                    target="_blank"
-                >
-                    Google Maps
-                </a>
-            </p>
-        </section>
-    </TextContent>
+    </iframe>
+  </div>
+  <div style="height: 80px; margin-bottom: -80px; background-color: white">
+  </div>
 </Html>
