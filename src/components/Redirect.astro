@@ -1,0 +1,24 @@
+---
+export interface Props {
+    to: string;
+}
+
+const {
+    to
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Redirect after 0 seconds -->
+    <meta http-equiv="refresh" content={`0; URL=${to}`} />
+    <title>Leite weiter...</title>
+    <script is:inline define:vars={{ to }}>
+        window.location.href = to;
+    </script>
+</head>
+<body>
+</body>
+</html>
