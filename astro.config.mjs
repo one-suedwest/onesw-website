@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.onesw.de/',
+  site: 'https://onesw.de/',
   integrations: [compress(), sitemap(), robotsTxt({
     policy: [
       {
