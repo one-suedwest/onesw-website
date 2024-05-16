@@ -29,6 +29,10 @@ export default defineConfig({
         userAgent: '*'
       },
       {
+        disallow: '/glory',
+        userAgent: '*'
+      },
+      {
         disallow: '/404',
         userAgent: '*'
       }

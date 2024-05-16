@@ -11,11 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^2.0.2",
-    "astro": "^2.10.8",
-    "astro-compress": "^2.0.11"
+    "@astrojs/sitemap": "^3.1.4",
+    "astro": "^4.8.5",
+    "astro-compress": "^2.2.23"
   },
   "devDependencies": {
-    "astro-robots-txt": "^0.5.0"
+    "astro-robots-txt": "^1.0.0"
   }
 }
