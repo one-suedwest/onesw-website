@@ -25,13 +25,21 @@ import Redirect from "../components/Redirect.astro";
 
 <Redirect to="${link.to}" />
     `;
-
     // Generate files for each link
-    redirects.forEach((link, index) => {
-        const fileName = `${link.path}.astro`;
-        const filePath = join(pagesDir, fileName);
-        writeFileSync(filePath, template(link), 'utf8');
-        console.log(`Created ${filePath}`);
+    redirects.forEach((link) => {
+        for(let i = 0; i < 3; i++){
+            let linkPath = link.path;
+            if(i === 1) {
+                linkPath = link.path.toUpperCase();
+            }
+            if(i === 2) {
+                linkPath = link.path[0].toUpperCase() + link.path.slice(1);
+            }
+            const fileName = `${linkPath}.astro`;
+            const filePath = join(pagesDir, fileName);
+            writeFileSync(filePath, template(link), 'utf8');
+            console.log(`Created ${filePath}`);
+        }
     });
 }
 
