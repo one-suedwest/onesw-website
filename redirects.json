@@ -1,0 +1,26 @@
+[
+    {
+        "path": "glory",
+        "to": "https://onesw.de/"
+    },
+    {
+        "path": "insta",
+        "to": "https://www.instagram.com/onemovementsw/"
+    },
+    {
+        "path": "lead",
+        "to": "https://onesw.de/"
+    },
+    {
+        "path": "spenden",
+        "to": "https://www.paypal.com/paypalme/onesw"
+    },
+    {
+        "path": "whatsapp",
+        "to": "https://chat.whatsapp.com/HAXcNGHEwohF3OBBtgGPR4"
+    },
+    {
+        "path": "youtube",
+        "to": "https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
+    }
+]
