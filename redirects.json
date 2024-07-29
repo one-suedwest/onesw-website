@@ -22,5 +22,9 @@
     {
         "path": "youtube",
         "to": "https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
+    },
+    {
+        "path": "teamboost",
+        "to": "https://yarps.church.tools/publicgroup/269"
     }
 ]
