@@ -1,0 +1,178 @@
+---
+import Html from "../layouts/Html.astro";
+
+import Navigation from "../components/Navigation.astro";
+import HeaderImage from "../components/HeaderImage.astro";
+import TextContent from "../components/TextContent.astro";
+import HiddenField from "../components/HiddenField.astro";
+
+const href = "/lead";
+---
+
+<Html
+  title="ONESW LEAD - Leiterschaftsklausur 2025 | One Südwest"
+  description="Informationen über die ONE LEAD 2025 von 10.01. - 11.01.2025 in der DJH Bad Kreuznach"
+  pageUrl="https://www.onesw.de/lead"
+  ogTitle="ONESW LEAD | Leiterschaftsklausur 2025"
+  ogDescription="ONESW LEAD von 10.01. - 11.01.2025 in der DJH Bad Kreuznach"
+  ogImage="/og-image-lead.jpg"
+  imageAlt="ONESW LEAD 10.01.2025 - 11.01.2025 in der DJH Bad Kreuznach von one südwest"
+  twitterImage="/twitter-image-lead.webp"
+  updatedTime="2024-09-06T17:36:58.863Z"
+  href={href}
+>
+  <Navigation href={href} />
+  <HeaderImage
+    src="/images/lead_header-image/lead.png"
+    centerImage={true}
+    alt="ONESW LEAD 10.01.2025 - 11.01.2025 in der DJH Bad Kreuznach von one südwest"
+    position="50% 50%"
+    bottomTransitionColor="var(--background-color)"
+  />
+  <TextContent
+    backgroundColor="var(--background-color)"
+    showBottomTransition={false}
+  >
+    <h1 style="word-wrap: break-word;">ONESW LEAD - Leiterschaftsklausur</h1>
+    <h2>Von 10.01. - 11.01.2025 in der DJH Bad Kreuznach</h2>
+    <section>
+      <p>
+        Wir laden alle Jugendleitungsteams der BFP-Gemeinden in Rheinland-Pfalz und Saarland herzlich zur ONESW LEAD Leiterschaftsklausur 2025 ein.
+      </p>
+      <p>
+        Lasst euch auf der LEAD bei viel Gemeinschaft, Austausch und bei mehreren Gottesdiensten ermutigen und erbauen.
+      </p>
+      <p>Dieses Jahr finden wieder Wahlen statt. Die komplette Jugendleitung wird gewählt.</p>
+    </section>
+    
+    <section>
+      <h2>Agenda</h2>
+    
+      <h3>Freitag, 10. Januar 2025</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+          <tr style="background-color: #202020;">
+            <th style="text-align: left; padding: 10px; border: 1px solid #ddd; width: 200px">Zeit</th>
+            <th style="text-align: left; padding: 10px; border: 1px solid #ddd;">Programmpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">18:00 - 19:30 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Abendessen</td>
+          </tr>
+          <tr style="background-color: #303030;">
+            <td style="padding: 10px; border: 1px solid #ddd;">19:30 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Auftakt im Seminarraum – Thema: Vision & Ausrichtung</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">&nbsp;</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Offener Ausklang</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <h3 style="margin-top: 40px">Samstag, 11. Januar 2025</h3>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+          <tr style="background-color: #202020;">
+            <th style="text-align: left; padding: 10px; border: 1px solid #ddd; width: 200px">Zeit</th>
+            <th style="text-align: left; padding: 10px; border: 1px solid #ddd;">Programmpunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">07:30 - 09:30 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Frühstück</td>
+          </tr>
+          <tr style="background-color: #303030;">
+            <td style="padding: 10px; border: 1px solid #ddd;">09:30 - 11:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Geschäftlicher Teil – TOPs 0-4</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">11:00 - 12:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Faschiplanung</td>
+          </tr>
+          <tr style="background-color: #303030;">
+            <td style="padding: 10px; border: 1px solid #ddd;">12:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Mittagessen</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">13:30 - 14:15 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Session 1</td>
+          </tr>
+          <tr style="background-color: #303030;">
+            <td style="padding: 10px; border: 1px solid #ddd;">14:15 - 14:30 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Pause</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">14:30 - 15:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Session 2</td>
+          </tr>
+          <tr style="background-color: #303030;">
+            <td style="padding: 10px; border: 1px solid #ddd;">15:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Kaffee & Kuchen</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">15:15 - 16:00 Uhr</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Regionale Jahresplanung 2025 und Abschluss</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section>
+      <h2>Anmeldung & Kosten</h2>
+      <p>Falls du nur zum geschäftlichen Teil kommen möchtest (Wahlen / Finanzbericht etc.), dann schreibe uns per <HiddenField prefixValue="anmeldung" suffixValue="@onesw.de" />. Wir würden das genauere dann nochmal mit dir besprechen.</p>
+      <p>In den Kosten enthalten sind Übernachtung und Verpflegung. Die Anmeldung ist erst gültig, wenn der Beitrag überwiesen ist.</p>
+      <ul>
+        <li>Mehrbettzimmer (3-4er) - € 40,- pro Person</li>
+        <li>Familienzimmer (2er) - € 50,- pro Person</li>
+        <li>Einzelbettzimmer - € 60,-</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Bankverbindung</h2>
+      <h3>YOUTH ALIVE RHEINLAND-PFALZ/SAARLAND</h3>
+      <p>
+        IBAN: DE34 5505 0120 0000 0136 64<br />
+        BIC: MALADE51MNZ<br />
+        Verwendungszweck: LEAD25 Name, Vorname
+      </p>
+    </section>
+    
+    <section>
+      <h2>Anfahrt</h2>
+      <p>
+        Nahetal Jugendherberge Bad Kreuznach<br />
+        Rheingrafenstraße 53<br />
+        55543 Bad Kreuznach
+      </p>
+      <p>
+        <a href="https://maps.app.goo.gl/2UWLWAwkPmgK6n6H7" title="Google Maps Anfahrt" target="_blank">Google Maps</a>
+      </p>
+    </section>
+    
+    <section>
+      <h2 style="color: #b51818">BITTE UNBEDINGT LESEN</h2>
+      <p>
+        Bitte aktiviere umgehend die Bestätigungsemail, die du nach dem Absenden deiner Daten erhältst. (Diese ist wegen technischer Gründe nur wenige Tage gültig)
+      </p>
+      <p>Weiter unten findest du die Anmeldung.</p>
+    </section>
+  </TextContent>
+  <div style="padding: min(30vh, 140px) 20px; background-color: white;">
+    <iframe
+      width="100%"
+      style="border-width:0px; display: block;"
+      height="1400px"
+      src="https://yarps.church.tools/publicgroup/272?embedded=true"
+      title="Anmeldung zur LEAD über church tools"
+      loading="lazy"
+    >
+    </iframe>
+  </div>
+  <div style="height: 80px; margin-bottom: -80px; background-color: white">
+  </div>
+</Html>
