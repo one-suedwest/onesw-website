@@ -1,0 +1,168 @@
+---
+import Html from "../layouts/Html.astro";
+
+import Navigation from "../components/Navigation.astro";
+import VideoHeaderImage from "../components/VideoHeaderImage.astro";
+import TextContent from "../components/TextContent.astro";
+import DownloadCTA from "../components/DownloadCTA.astro";
+import HiddenField from "../components/HiddenField.astro";
+
+const href = "/jcsquad-vorab";
+---
+
+<Html
+  title="JCSquad - Faschingsfreizeit 2025 | One Südwest"
+  description="Anmeldung für die JCSquad Faschingsfreizeit von 28.02. - 04.03.2025 in Grünstadt"
+  pageUrl="https://www.onesw.de/jcsquad-vorab"
+  ogTitle="JCSquad | Faschingsfreizeit 2025"
+  ogDescription="JCSquad Faschingsfreizeit 28.02. - 04.03.2025 in Grünstadt"
+  ogImage="/og-image-jcsquad.jpg"
+  imageAlt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von One Südwest"
+  twitterImage="/twitter-image-jcsquad.webp"
+  updatedTime="2024-09-15T07:49:16.759Z"
+  href={href}
+>
+  <Navigation href={href} />
+  <VideoHeaderImage
+    srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
+      .map((width) => `/images/jcsquad_header-image/${width}.webp ${width}w`)
+      .join(", ")}
+    videoSrc="/videos/jcsquad_header-video.mp4"
+    centerImage={true}
+    alt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von One Südwest"
+    position="100% 50%"
+    bottomTransitionColor="var(--dark-background-color)"
+  />
+  <TextContent
+    backgroundColor="var(--dark-background-color)"
+    showBottomTransition={true}
+    bottomTransitionColor="white"
+  >
+    <h1>JCSquad - Faschingsfreizeit</h1>
+    <h2>Von 28.02. - 04.03.2025 in Grünstadt</h2>
+    <section>
+      <p>
+        JCSquad ballert in Grünstadt – und du willst diese epische
+        Freizeit auf keinen Fall verpassen!
+      </p>
+      <p>
+        Pack deine Sachen und mach dich bereit für die Faschi 2025!
+        Dieses Jahr gehen wir all-in:
+        Wir tauchen tief ein und erleben, was es wirklich bedeutet, von JC bedingungslos geliebt zu werden.
+        Wir erfahren die heilende Kraft Gottes und entdecken die wahre Identität, die wir in Ihm haben.
+      </p>
+      <p>
+        Und die besten Erinnerungen, von denen du noch ewig zehren wirst gibt es auch noch mit dazu!
+        Sei dabei, wenn sich die Squad in Grünstadt trifft und wir gemeinsam eine unvergessliche Zeit erleben.
+      </p>
+    </section>
+    <section>
+      <h2>Zahlung der Teilnahmegebühr</h2>
+      <p>
+        Die Teilnahmegebühr muss zeitgleich mit der Anmeldung überwiesen werden.<br />
+        Weitere Infos dazu in den AGB.
+      </p>
+      <h3>Early Bird Ticket (25% Rabatt!!)</h3>
+      <p>Bei Anmeldung bis 31.10.2024 = € 120,-</p>
+      <h3>Standard Ticket</h3>
+      <p>Bei Anmeldung vom 01.11.2024 – 20.02.2025 = € 160,-</p>
+      <h3>Spätbucher Ticket</h3>
+      <p>Ab dem 21.02.2025 = € 180,-</p>
+      <p>
+        Geschwisterkinder erhalten eine Ermäßigung. Der Teilnehmerbetrag beträgt
+        in diesem Fall ab dem 2. Geschwisterkind € 100 pro Kind. Eltern mit SGB
+        II – Bezug melden sich bitte bei Jan: <HiddenField prefixValue="+49 176 " suffixValue="705 96 308" />.
+      </p>
+    </section>
+    <section>
+      <h2>Sondertickets</h2>
+      <style is:inline>
+        [data-hide] {
+          display: none;
+        }
+      </style>
+      <h3 data-hide="tagesticket">Tagesticket</h3>
+      <p data-hide="tagesticket">
+        30€ pro Tag (inklusive Abendsession)<br />
+        Tag bitte im Verwendungszweck mit angeben.<br />
+        Beispiel Verwendungszweck: JCSQUAD, Fabian Letsch, Tagesticket Montag
+      </p>
+      <h3 data-hide="abendsession">Abendsession</h3>
+      <p data-hide="abendsession">
+        15€ pro Abendsession<br />
+        Tag bitte im Verwendungszweck mit angeben.<br />
+        Beispiel Verwendungszweck: JCSQUAD, Fabian Letsch, Abendsession Montag
+      </p>
+      <h3 data-hide="christmas-special">Christmas Special!!</h3>
+      <p data-hide="christmas-special">
+        Bei Anmeldung und Zahlung des Teilnahmebetrages<br />
+        vom 20.12. bis 03.01. = € 120,- (25% Rabatt)
+      </p>
+      <script>
+        window.addEventListener('DOMContentLoaded', function() {
+          const currentDate = new Date();
+          const tagesticketShowDate = new Date("2025-02-01T00:00:00+01:00"); // German time
+          const abendsessionShowDate = new Date("2025-02-01T00:00:00+01:00"); // German time
+          const christmasStart = new Date("2024-12-20T00:00:00+01:00"); // German time
+          const christmasEnd = new Date("2025-01-03T23:59:59+01:00"); // German time
+
+          if (currentDate >= tagesticketShowDate) {
+            document.querySelectorAll("[data-hide='tagesticket']").forEach(el => (el as any).style.display = "block");
+          }
+
+          if (currentDate >= abendsessionShowDate) {
+            document.querySelectorAll("[data-hide='abendsession']").forEach(el => (el as any).style.display = "block");
+          }
+
+          if (currentDate >= christmasStart && currentDate <= christmasEnd) {
+            document.querySelectorAll("[data-hide='christmas-special']").forEach(el => (el as any).style.display = "block");
+          }
+        });
+      </script>
+      <h3>Teamboost Ticket</h3>
+      <p>Nur für Teilnehmer des Teamboosts 2024 in Kaiserslautern.<br />Bei Anmeldung bis 31.01.2025 = € 80,-</p>
+      <h3>Familienzimmer</h3>
+      <p>
+        Ein Familienzimmer kostet 300€ und beinhaltet die Teilnahmegebühren für die Eltern. Kinder unter 10 Jahren nehmen kostenlos teil.
+        Für Kinder ab 10 Jahren fällt der aktuell gültige normale Ticketpreis an. Nur nach Freigabe durch Jan verfügbar.
+      </p>
+      <p>
+        Schreibe bitte an Dayany, falls du Kinder mitbringst, da sie eine Kinderbetreuung anbietet. E-Mail: <HiddenField prefixValue="dayany14" suffixValue="09@gmail.com" />
+      </p>
+    </section>
+    <section>
+      <h2>Bankverbindung</h2>
+      <h3>YOUTH ALIVE RHEINLAND-PFALZ/SAARLAND</h3>
+      <p>
+        IBAN: DE34 5505 0120 0000 0136 64<br />
+        BIC: MALADE51MNZ<br />
+        Verwendungszweck: JCSQUAD, Volle Namen der Teilnehmer, Art des Tickets
+      </p>
+    </section>
+    <section>
+      <h2 style="color: #b51818">BITTE UNBEDINGT LESEN</h2>
+      <p>
+        Bevor du zur JCSquad Freizeit kommst, musst
+        du mit deinen Eltern die Teilnahmebedingungen durchlesen und unterschreiben.
+        Du musst diese unterschrieben zur JCSquad Freizeit mitbringen – kein Wenn und Aber.
+      </p>
+      <p>Weiter unten findest du die Anmeldung.</p>
+      <DownloadCTA
+        href="/pdf/teilnahmebedingungen-jcsquad.pdf"
+        text="Teilnahmebedingungen herunterladen"
+      />
+    </section>
+  </TextContent>
+  <div style="padding: min(30vh, 140px) 20px; background-color: white;">
+    <iframe
+      width="100%"
+      style="border-width:0px; display: block;"
+      height="1000px"
+      src="https://yarps.church.tools/publicgroup/275?embedded=true"
+      title="Anmeldung zur Faschingsfreizeit über church tools"
+      loading="lazy"
+    >
+    </iframe>
+  </div>
+  <div style="height: 80px; margin-bottom: -80px; background-color: white"></div>
+</Html>
