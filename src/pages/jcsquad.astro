@@ -1,7 +1,6 @@
 ---
 import Html from "../layouts/Html.astro";
-
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.tsx";
 import VideoHeaderImage from "../components/VideoHeaderImage.astro";
 import TextContent from "../components/TextContent.astro";
 
@@ -9,112 +8,60 @@ const href = "/jcsquad";
 ---
 
 <Html
-  title="JCSquad - Faschingsfreizeit 2025 | One Südwest"
+  title="JCSquad - Faschingsfreizeit 2025 | one südwest"
   description="JCSquad Faschingsfreizeit von 28.02. - 04.03.2025 in Grünstadt"
   pageUrl="https://www.onesw.de/jcsquad"
   ogTitle="JCSquad | Faschingsfreizeit 2025"
   ogDescription="JCSquad Faschingsfreizeit 28.02. - 04.03.2025 in Grünstadt"
   ogImage="/og-image-jcsquad.jpg"
-  imageAlt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von One Südwest"
+  imageAlt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von one südwest"
   twitterImage="/twitter-image-jcsquad.webp"
-  updatedTime="2024-09-29T21:40:32.905Z"
+  updatedTime="2024-10-13T19:52:22.410Z"
   href={href}
 >
-  <Navigation href={href} />
+  <Header
+    href={href}
+    client:load
+  />
   <VideoHeaderImage
-    srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
-      .map((width) => `/images/jcsquad_header-image/${width}.webp ${width}w`)
-      .join(", ")}
     videoSrc="/videos/jcsquad_header-video.mp4"
     centerImage={true}
-    alt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von One Südwest"
-    position="50% 50%"
-  />
-  <TextContent>
-    <style>
-      a {
-          padding: 10px 20px;
-          background-color:  #ffff00;
-          color: black;
-          border-radius: 2px;
-          text-decoration: none;
-          transition: all 200ms ease;
-          text-align: center;
-      }
-      
-      a:hover {
-          background-color:#ff0000
-      }
-
-      .hase {
-          display: flex;
-          gap: 16px;
-          margin-top: 20px;
-          flex-wrap: wrap;
-      }
-
-      .haste {
-          background-color: #ff00ff;
-      }
-
-      @media (max-width: 600px) {
-          .hase {
-              flex-direction: column;
-          }
-
-          a {
-              flex: 1;
-          }
-      }
-
-      .rainbow {
-        animation: colorRotate 0.5s linear 0s infinite;
-      }
-
-      @keyframes colorRotate {
-        0% {
-          color: #ff0000;
-        }
-        20% {
-          color: #ffff00;
-        }
-        40% {
-          color: #00ff00;
-        }
-        60% {
-          color: #00ffff;
-        }
-        80% {
-          color: #ff00ff;
-        }
-        100% {
-          color: #ff0000;
-        }
-      }
-    </style>
-    <h1 style="color: #0FF">JCSquad - Faschingsfreizeit</h1>
-    <h2>Von 28.02. - 04.03.2025 in Grünstadt</h2>
-    <section>
-      <p>
-        JCSquad ballert in Grünstadt – und du willst diese epische
-        Freizeit auf keinen Fall verpassen!
-      </p>
-      <p>
-        Pack deine Sachen und mach dich bereit für die Faschi 2025!
-        Dieses Jahr gehen wir all-in:
-        Wir tauchen tief ein und erleben, was es wirklich bedeutet, von <span class="rainbow">JC</span> bedingungslos geliebt zu werden.
-        Wir erfahren die heilende Kraft Gottes und entdecken die wahre Identität, die wir in Ihm haben.
-      </p>
-      <p>
-        Und die besten Erinnerungen, von denen du noch ewig zehren wirst gibt es auch noch mit dazu!
-        Sei dabei, wenn sich die Squad in Grünstadt trifft und wir gemeinsam eine unvergessliche Zeit erleben.
-      </p>
-    </section>
-    <section>
-      <div class="hase">
-        <a href="https://pretix.onesw.de/onesw/jcsquad" target="_blank">Jetzt Tickets sichern</a>
-        <a href="/pdf/teilnahmebedingungen-jcsquad.pdf" target="_blank" class="haste">Teilnahmebedingungen herunterladen</a>
+    alt="JCSquad Faschi 28.02. - 04.03.2025 in Grünstadt von one südwest"
+  >
+      <img
+        class=""
+        src="/images/jcsquad_header-image/center-image.png"
+      />
+  </VideoHeaderImage>
+  <TextContent singleContent>
+    <div class="flex gap-4">
+      <div class="text-red-500 text-[70px] font-black font-headline leading-[60px] w-[50px] break-words text-center hidden sm:block">JCSquad</div>
+      <div class="flex flex-col gap-2 break-words flex-grow min-w-0">
+        <section>
+          <h1 class="text-cyan-300 text-[50px] sm:text-[60px] font-black font-headline leading-[50px] sm:leading-[60px] mb-5 break-words">Faschingsfreizeit 2025</h1>
+          <h2 class="mb-5">Von 28.02. - 04.03.2025 in Grünstadt</h2>
+          <p class="mb-5">
+            JCSquad ballert in Grünstadt – und du willst diese epische
+            Freizeit auf keinen Fall verpassen!
+          </p>
+          <p class="mb-5">
+            Pack deine Sachen und mach dich bereit für die Faschi 2025!
+            Dieses Jahr gehen wir all-in:
+            Wir tauchen tief ein und erleben, was es wirklich bedeutet, von <span class="animate-[colorRotate_0.5s_linear_infinite]">JC</span> bedingungslos geliebt zu werden.
+            Wir erfahren die heilende Kraft Gottes und entdecken die wahre Identität, die wir in Ihm haben.
+          </p>
+          <p>
+            Und die besten Erinnerungen, von denen du noch ewig zehren wirst gibt es auch noch mit dazu!
+            Sei dabei, wenn sich die Squad in Grünstadt trifft und wir gemeinsam eine unvergessliche Zeit erleben.
+          </p>
+        </section>
+        <section>
+          <div class="flex gap-4 mt-5 flex-col sm:flex-row">
+            <a href="https://pretix.onesw.de/onesw/jcsquad" target="_blank" class="py-2 px-4 bg-yellow-300 text-black no-underline transition duration-200 ease-in-out hover:bg-red-500 text-center">Jetzt dein Tickets sichern</a>
+            <a href="/pdf/teilnahmebedingungen-jcsquad.pdf" target="_blank" class="py-2 px-4 bg-fuchsia-500 text-black no-underline transition duration-200 ease-in-out hover:bg-red-500 text-center">Teilnahmebedingungen herunterladen</a>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   </TextContent>
 </Html>

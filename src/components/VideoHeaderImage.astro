@@ -1,6 +1,4 @@
 ---
-import Transition from './Transition.astro';
-
 export interface Props {
     src?: string;
     srcset?: string;
@@ -8,7 +6,6 @@ export interface Props {
     alt: string;
     position?: string;
     centerImage?: boolean;
-    bottomTransitionColor?: string;
 }
 
 const {
@@ -18,85 +15,42 @@ const {
     alt,
     position = "50% 50%",
     centerImage = false,
-    bottomTransitionColor = "var(--background-color)",
 } = Astro.props;
 ---
 
-<style is:inline>
-    .wrapper {
-        width: 100%;
-        height: calc(100vh - 100px);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .header-image,
-    .header-video {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        display: block;
-    }
-
-    .header-video {
-        display: none;
-    }
-
-    .center-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(100vw - 80px);
-        user-select: none;
-        pointer-events: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .bottom-transition {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-</style>
-
-<div class="wrapper">
-    <img
-        src={src}
-        srcset={srcset}
-        alt={alt}
-        class="header-image"
-        style={`object-position: ${position}`}
-    />
+<div class="w-full h-[100vh] relative overflow-hidden">
+    {src && (
+        <img
+            src={src}
+            srcset={srcset}
+            alt={alt}
+            class="object-cover h-full w-full block"
+            style={`object-position: ${position}`}
+        />
+    )}
     {videoSrc && (
         <video
-            class="header-video"
+            class="header-video object-cover h-full w-full block"
             autoplay
             muted
             playsinline
             disablepictureinpicture
+            loop
         >
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
     )}
     {centerImage && (
-        <div class="center-image">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(100vw-80px)] select-none pointer-events-none flex justify-center items-center">
             <slot />
         </div>
     )}
-    <div class="bottom-transition">
-        <Transition
-            color={bottomTransitionColor}
-        />
-    </div>
 </div>
 
 <script is:inline>
     window.addEventListener('load', function() {
-        const headerImage = document.querySelector('.header-image');
+        const headerImage = document.querySelector('.object-cover.h-full.w-full.block');
         const headerVideo = document.querySelector('.header-video');
 
         if (headerVideo) {

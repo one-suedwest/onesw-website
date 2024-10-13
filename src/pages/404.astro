@@ -1,11 +1,7 @@
 ---
 import Html from "../layouts/Html.astro";
 
-import Navigation from "../components/Navigation.astro";
-import HeaderImage from "../components/HeaderImage.astro";
-import TextContent from "../components/TextContent.astro";
-import OneLogoWithText from "../components/svg/OneLogoWithText.astro";
-import HiddenField from "../components/HiddenField.astro";
+import Header from "../components/Header.tsx";
 
 const href = "/404";
 ---
@@ -14,42 +10,14 @@ const href = "/404";
 	title="Diese Seite existiert nicht"
 	href={href}
 >
-	<Navigation href={href} />
-    <style>
-        .wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            /* 100vh - Header - Footer seperator - Footer */
-            height: calc(100vh - 64px - 130px - 80px);
-            width: 100%;
-        }
-
-        .wrapper img {
-            max-width: 80vw;
-        }
-
-        .wrapper div {
-            font-family: "Teko", sans-serif;
-            color: var(--font-color);
-            font-size: 38px;
-        }
-
-        @media (min-width: 701px) {
-            .wrapper {
-                height: calc(100vh - 64px - 90px - 80px);
-            }
-        }
-
-        @media (min-width: 920px) {
-            .wrapper {
-                height: calc(100vh - 100px - 90px - 80px);
-            }
-        }
-    </style>
-    <div class="wrapper">
-        <img src="/grab.svg" />
-        <div>404 - Nicht Gefunden</div>
+    <Header
+        href={href}
+        client:load
+    />
+    <div class="bg-black flex flex-grow w-full items-center justify-center">
+        <div class="flex flex-col items-center justify-center gap-4 p-8 text-center">
+            <img src="/grab.svg" />
+            <div class="text-white font-black text-3xl font-headline">404 - Nicht Gefunden</div>
+        </div>
     </div>
 </Html>

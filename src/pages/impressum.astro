@@ -1,52 +1,49 @@
 ---
 import Html from "../layouts/Html.astro";
 
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.tsx";
 import TextContent from "../components/TextContent.astro";
-import HiddenField from "../components/HiddenField.astro";
+import HiddenField from "../components/HiddenField.tsx";
 
 const href = "/impressum";
 ---
 
 <Html
-	title="Impressum | One Südwest"
+	title="Impressum | one südwest"
 	description="Rechtliche Informationen bzgl. Kontakt, Verantwortung, Haftung und Urheberrecht"
 	pageUrl="https://www.onesw.de/impressum"
-	ogTitle="Impressum | One Südwest"
+	ogTitle="Impressum | one südwest"
 	ogDescription="Rechtlich notwendige Angaben"
-	updatedTime="2022-10-10T21:25:52.156Z"
+	updatedTime="2024-10-13T19:52:22.410Z"
 	href={href}
 >
-	<Navigation href={href} />
-	<TextContent
-		backgroundColor="var(--background-color)"
-		bottomTransitionColor="var(--dark-background-color)"
-	>
-		<h1 style="margin-bottom: -32px;">Impressum</h1>
-		<section>
-			<h2>Allgemeine Informationen</h2>
-			<p>
-				One Südwest ist ein nicht eingetragener Markenname von Youth
+	<Header
+		href={href}
+		client:load
+	/>
+	<TextContent singleContent>
+		<h1 class="font-headline font-black text-3xl mb-8">Impressum</h1>
+		<section class="mb-8">
+			<h2 class="font-headline font-black text-2xl mb-6">Allgemeine Informationen</h2>
+			<p class="mb-4">
+				one südwest ist ein nicht eingetragener Markenname von Youth
 				Alive Rheinland-Pfalz/Saarland.
 			</p>
 
-			<p>
+			<p class="mb-4">
 				Youth Alive Rheinland-Pfalz/Saarland ist ein Arbeitszweig des <a
 					href="http://www.ljw-rps.de/"
 					target="_blank"
-					>Landesjugendwerks des BFP – Region Rheinland-Pfalz und
-					Saarland</a
-				>.
+				>Landesjugendwerks des BFP – Region Rheinland-Pfalz und Saarland</a>.
 			</p>
 
-			<p>
+			<p class="mb-4">
 				Das Landesjugendwerk des BFP in Rheinland-Pfalz und Saarland ist
 				Teil vom <a href="https://www.bfp.de/" target="_blank"
-					>Bund Freikirchlicher Pfingstgemeinden KdöR</a
-				>.
+				>Bund Freikirchlicher Pfingstgemeinden KdöR</a>.
 			</p>
 
-			<p>
+			<p class="mb-4">
 				Youth Alive Rheinland-Pfalz/Saarland hat als eigenständige
 				Instanz die Inhalte dieser Webseite erstellt. Falls Ihnen
 				Probleme mit der Webseite auffallen, informieren Sie bitte
@@ -55,58 +52,58 @@ const href = "/impressum";
 			</p>
 		</section>
 
-		<section>
-			<h2>Angaben gemäß § 5 TMG</h2>
-			<h3>Verantwortlich</h3>
+		<section class="mb-8">
+			<h2 class="font-headline font-black text-2xl mb-6">Angaben gemäß § 5 TMG</h2>
+			<h3 class="font-headline font-black text-xl mb-4">Verantwortlich</h3>
 
-			<h4>Rechtsbezeichnung des Landesjugendwerks</h4>
-			<p>
+			<h4 class="font-headline font-black text-lg mb-2">Rechtsbezeichnung des Landesjugendwerks</h4>
+			<p class="mb-4">
 				Bund Freikirchlicher Pfingstgemeinden, K.d.ö.R; (BFP)<br />
 				Landesjugendwerk des BFP, Region Rheinland-Pfalz/Saarland<br />
 				Anerkannter Träger der freien Jugendhilfe
 			</p>
 
-			<h4>Adresse</h4>
-			<p>
+			<h4 class="font-headline font-black text-lg mb-2">Adresse</h4>
+			<p class="mb-4">
 				Bund Freikirchlicher Pfingstgemeinden KdöR<br />
 				Industriestraße 6-8<br />
 				64390 Erzhausen<br />
 				Deutschland
 			</p>
 
-			<h4>
+			<h4 class="font-headline font-black text-lg mb-2">
 				Rechtlicher Vertreter des Landesjugendwerks des BFP – Region
 				Rheinland-Pfalz und Saarland
 			</h4>
-			<p>
+			<p class="mb-4">
 				David Sindhu<br />
-				Telefon: <HiddenField prefixValue="06763-" suffixValue="309853" /><br />
-				E-Mail: <HiddenField prefixValue="david.sindhu@" suffixValue="ljw-rps.de" />
+				Telefon: <HiddenField prefixValue="06763-" suffixValue="309853" client:load /><br />
+				E-Mail: <HiddenField prefixValue="david.sindhu@" suffixValue="ljw-rps.de" client:load />
 			</p>
 
-			<h4>
+			<h4 class="font-headline font-black text-lg mb-2">
 				Rechtlicher Vertreter von Youth Alive Rheinland-Pfalz/Saarland
 			</h4>
-			<p>
+			<p class="mb-4">
 				Jan Nikel<br />
-				Telefon: <HiddenField prefixValue="+49 176 " suffixValue="70596308" /><br />
-				E-Mail: <HiddenField prefixValue="jan@" suffixValue="onesw.de" />
+				Telefon: <HiddenField prefixValue="+49 176 " suffixValue="70596308" client:load /><br />
+				E-Mail: <HiddenField prefixValue="jan@" suffixValue="onesw.de" client:load />
 			</p>
 
-			<h4>Redaktionell Verantwortlicher</h4>
-			<p>
+			<h4 class="font-headline font-black text-lg mb-2">Redaktionell Verantwortlicher</h4>
+			<p class="mb-4">
 				Fabian Letsch<br />
 				Albert-Haueisen-Ring 5<br />
 				67071 Ludwigshafen<br />
 				<br />
-				Telefon: <HiddenField prefixValue="+49 163 " suffixValue="1409 701" /><br />
-				E-Mail: <HiddenField prefixValue="fabian@" suffixValue="onesw.de" />
+				Telefon: <HiddenField prefixValue="+49 163 " suffixValue="1409 701" client:load /><br />
+				E-Mail: <HiddenField prefixValue="fabian@" suffixValue="onesw.de" client:load />
 			</p>
 		</section>
 
-		<section>
-			<h2>Haftung für Inhalte</h2>
-			<p>
+		<section class="mb-8">
+			<h2 class="font-headline font-black text-2xl mb-6">Haftung für Inhalte</h2>
+			<p class="mb-4">
 				Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
 				Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
 				verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
@@ -122,9 +119,9 @@ const href = "/impressum";
 			</p>
 		</section>
 
-		<section>
-			<h2>Haftung für Links</h2>
-			<p>
+		<section class="mb-8">
+			<h2 class="font-headline font-black text-2xl mb-6">Haftung für Links</h2>
+			<p class="mb-4">
 				Unser Angebot enthält Links zu externen Websites Dritter, auf
 				deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
 				diese fremden Inhalte auch keine Gewähr übernehmen. Für die
@@ -140,9 +137,9 @@ const href = "/impressum";
 			</p>
 		</section>
 
-		<section>
-			<h2>Urheberrecht</h2>
-			<p>
+		<section class="mb-8">
+			<h2 class="font-headline font-black text-2xl mb-6">Urheberrecht</h2>
+			<p class="mb-4">
 				Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
 				diesen Seiten unterliegen dem deutschen Urheberrecht. Die
 				Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
@@ -159,8 +156,8 @@ const href = "/impressum";
 			</p>
 		</section>
 
-		<section>
-			<p>
+		<section class="mb-8">
+			<p class="mb-4">
 				Dieses Impressum wurde Teilweise mit der Hilfe von <a
 					href="https://www.e-recht24.de/"
 					target="_blank">www.e-recht24.de</a
@@ -169,3 +166,4 @@ const href = "/impressum";
 		</section>
 	</TextContent>
 </Html>
+

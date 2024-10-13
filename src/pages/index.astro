@@ -1,75 +1,80 @@
 ---
 import Html from "../layouts/Html.astro";
 
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.tsx";
 import HeaderImage from "../components/HeaderImage.astro";
 import TextContent from "../components/TextContent.astro";
 import OneLogoWithText from "../components/svg/OneLogoWithText.astro";
-import HiddenField from "../components/HiddenField.astro";
+import HiddenField from "../components/HiddenField.tsx";
 
 const href = "/";
 ---
 
 <Html
-	title="One Südwest - Jugendliche für Jesus und seine Gemeinde begeistern"
-	description="One Südwest, auch bekannt als Youth Alive RPS, ist die Landesjugendarbeit des BFP in Rheinland-Pfalz und Saarland."
-	pageUrl="https://www.onesw.de"
-	ogTitle="One Südwest"
-	ogDescription="Jugendliche von Jesus und seiner Gemeinde begeistern."
-	ogImage="/og-image.jpeg"
-	imageAlt="Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das One Südwest Logo"
-	twitterImage="/twitter-image.webp"
-	updatedTime="2022-10-10T21:25:52.156Z"
-	href={href}
+  title="one südwest - Jugendliche für Jesus und seine Gemeinde begeistern"
+  description="one südwest, auch bekannt als Youth Alive RPS, ist die Landesjugendarbeit des BFP in Rheinland-Pfalz und Saarland."
+  pageUrl="https://www.onesw.de"
+  ogTitle="one südwest"
+  ogDescription="Jugendliche von Jesus und seiner Gemeinde begeistern."
+  ogImage="/og-image.jpeg"
+  imageAlt="Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das one südwest Logo"
+  twitterImage="/twitter-image.webp"
+  updatedTime="2024-10-13T19:52:22.410Z"
+  href={href}
+  footerClassName="bg-black"
 >
-	<Navigation href={href} />
-	<HeaderImage
-		srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
-			.map(
-				(width) => `/images/index_header-image/${width}.webp ${width}w`
-			)
-			.join(", ")}
-		centerImage={true}
-		alt="Kopfbild - Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das One Südwest Logo"
-		position="80% 40%"
-	>
-		<OneLogoWithText />
-	</HeaderImage>
-	<TextContent
-		backgroundColor="var(--background-color)"
-		bottomTransitionColor="var(--dark-background-color)"
-	>
-		<h1>ONE Südwest</h1>
-		<h2>Jugendliche von und für Jesus und seiner Gemeinde begeistern</h2>
-		<p>
-			One Südwest ist die übergemeindliche Jugendarbeit des <a
-				href="https://www.bfp.de/de/"
-				target="_blank"
-				title="Bund freikirchlicher Pfingstgemeinden">BFP</a
-			> in Rheinland-Pfalz und Saarland. Wir veranstalten Jugendfreizeiten
-			und Weiterbildungsevents für Jugendleiter und Mitarbeiter.
-			<br />
-			<br />
-			Offiziell sind wir ein Arbeitszweig vom <a
-				href="http://www.ljw-rps.de/"
-				target="_blank">Landesjugendwerk RPS</a
-			>
-			und eines der sieben Distrikte des <a
-				href="https://one-movement.de/"
-				target="_blank">ONE Movements</a
-			>.
-			<br />
-			<br />
-			Unser wichtigstes Event ist die Faschingsfreizeit, welche jedes Jahr
-			im Frühjahr stattfindet.
-			<br />
-			<br />
-			Falls du Teil einer christlichen Jugendarbeit in Rheinland-Pfalz oder
-			im Saarland bist und du an unseren Events mitwirken willst oder sonstige
-			Fragen hast, dann schreib am besten Mal Jan Nikel unter <HiddenField
-				prefixValue="+49 176 "
-				suffixValue="705 96 308"
-			/> an. Er ist der Leiter von One Südwest.
-		</p>
-	</TextContent>
+  <Header href={href} client:load />
+  <HeaderImage
+    srcset={[400, 600, 800, 1000, 1200, 1440, 1920]
+      .map((width) => `/images/index_header-image/${width}.webp ${width}w`)
+      .join(", ")}
+    centerImage={true}
+    alt="Kopfbild - Rechts steht Jan und spricht in ein Mikrofon, links sind Jugendliche welche aufmerksam zuhören. In der Mitte ist das one südwest Logo"
+    position="80% 40%"
+  >
+    <OneLogoWithText />
+  </HeaderImage>
+  <TextContent singleContent>
+    <div class="flex gap-8 sm:flex-row flex-col z-10 relative">
+      <div class="w-full sm:max-w-[200px] break-words flex gap-4 flex-col">
+        <h1 class="text-[70px] font-black font-headline leading-[60px]">
+          one südwest
+        </h1>
+        <h2 class="text-xl font-black font-headline">
+          Jugendliche von und für Jesus und seiner Gemeinde begeistern
+        </h2>
+      </div>
+      <div class="">
+        one südwest ist die übergemeindliche Jugendarbeit des <a
+          href="https://www.bfp.de/de/"
+          target="_blank"
+          title="Bund freikirchlicher Pfingstgemeinden">BFP</a
+        > in Rheinland-Pfalz und Saarland. Wir veranstalten Jugendfreizeiten und
+        Weiterbildungsevents für Jugendleiter und Mitarbeiter.
+        <br />
+        <br />
+        Offiziell sind wir ein Arbeitszweig vom <a
+          href="http://www.ljw-rps.de/"
+          target="_blank">Landesjugendwerk RPS</a
+        >
+        und eines der sieben Distrikte des <a
+          href="https://one-movement.de/"
+          target="_blank">ONE Movements</a
+        >.
+        <br />
+        <br />
+        Unser wichtigstes Event ist die Faschingsfreizeit, welche jedes Jahr im Frühjahr
+        stattfindet.
+        <br />
+        <br />
+        Falls du Teil einer christlichen Jugendarbeit in Rheinland-Pfalz oder im
+        Saarland bist und du an unseren Events mitwirken willst oder sonstige Fragen
+        hast, dann schreib am besten Mal Jan Nikel unter <HiddenField
+          prefixValue="+49 176 "
+          suffixValue="705 96 308"
+          client:load
+        /> an. Er ist der Leiter von one südwest.
+      </div>
+    </div>
+  </TextContent>
 </Html>

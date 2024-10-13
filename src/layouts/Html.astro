@@ -2,10 +2,11 @@
 import Footer from '../components/Footer.astro';
 import Head, { type Props as HeadProps } from '../components/Head.astro';
 
-export type Props = HeadProps & { href: string; };
+export type Props = HeadProps & { href: string; footerClassName?: string };
 
 const {
-    href
+    href,
+    footerClassName
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -13,14 +14,12 @@ const {
     <Head
         {...Astro.props}
     />
-    <body>
-        <div id="page-wrapper">
-            <div id="content-wrapper">
-                <slot />
-            </div>
-            <Footer href={href} />
-        </div>
-        <script async src='/scripts/navigation.js' />
+    <body class="min-h-screen flex flex-col justify-between overflow-x-hidden">
+        <slot />
+        <Footer
+            href={href}
+            className={footerClassName}
+        />
         <script async src="/scripts/hiddenFields.js" />
     </body>
 </html>

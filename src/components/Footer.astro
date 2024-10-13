@@ -1,67 +1,36 @@
 ---
 import Transition from './Transition.astro';
+import { cn } from '@/lib/utils';
 
 export interface Props {
     href: string;
+    className?: string;
 }
 const {
     href,
+    className,
 } = Astro.props;
 ---
-<style is:inline>
-    .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: var(--footer-height);
-    }
-
-    .footer-content {
-        height: calc(var(--footer-height) - 80px);
-        background-color: var(--dark-background-color);
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 34px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer-navigation {
-        display: flex;
-        gap: 40px;
-    }
-
-    .copyright {
-        color: var(--font-color);
-        font-family: "Teko", sans-serif;
-        font-size: 22px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    @media (max-width: 700px) {
-        .footer-content {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 4px 10px;
-        }
-
-        .footer-navigation {
-            display: contents;
-        }
-    }
-</style>
-
-<div class="footer">
-    <Transition
-        color="var(--dark-background-color)"
-    />
-    <div class="footer-content">
-        <div class="copyright">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
-        <div class="footer-navigation">
-            <a class="navigation-link" href="/impressum" title="Rechtliche Informationen" data-active={href === '/impressum'}>Impressum</a>
-            <a class="navigation-link" href="/datenschutz" title="Datenschutz Informationen" data-active={href === '/datenschutz'}>Datenschutz</a>
+<footer class={cn("w-full flex flex-col items-center", className)}>
+    <div class="w-full text-black bg-white px-6 sm:px-16 py-8 flex justify-center">
+        <div class="flex flex-col sm:flex-row justify-between items-start w-full max-w-[900px] box-border gap-4">
+            <div class="uppercase font-headline text-lg font-black w-full sm:w-auto">© Copyright Youth Alive RPS {new Date().getFullYear()}</div>
+            <div class="flex flex-wrap justify-between gap-4 w-full sm:w-auto sm:justify-start uppercase font-headline text-lg font-black">
+                <a 
+                    href="/impressum" 
+                    title="Rechtliche Informationen" 
+                    class={`hover:text-cyan-500 ${href === '/impressum' ? 'text-cyan-500' : ''}`}
+                >
+                    Impressum
+                </a>
+                <a 
+                    href="/datenschutz" 
+                    title="Datenschutz Informationen" 
+                    class={`hover:text-cyan-500 ${href === '/datenschutz' ? 'text-cyan-500' : ''}`}
+                >
+                    Datenschutz
+                </a>
+            </div>
         </div>
     </div>
-</div>
+</footer>

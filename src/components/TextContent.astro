@@ -1,25 +1,36 @@
 ---
 import Transition from "./Transition.astro";
+import { cn } from '@/lib/utils';
 
 export interface Props {
-    backgroundColor?: string;
-	bottomTransitionColor?: string;
+    className?: string;
+	bottomTransitionClassName?: string;
     showBottomTransition?: boolean;
+    singleContent?: boolean;
 }
 
 const {
-    backgroundColor = 'var(--background-color)',
-    bottomTransitionColor = 'var(--dark-background-color)',
+    className,
+    bottomTransitionClassName,
     showBottomTransition,
+    singleContent
 } = Astro.props;
+
 ---
-<div style={`background-color: ${backgroundColor}`}>
-    <div class="text-content">
+
+<div
+    class={cn(
+        'px-6 sm:px-16 py-[80px] bg-black text-white',
+        singleContent && "py-[min(15vw,160px)]" ,
+        className
+    )}
+>
+    <div class="mx-auto w-full max-w-[900px]">
         <slot />
     </div>
     {showBottomTransition && (
         <Transition
-            color={bottomTransitionColor}
+            className={bottomTransitionClassName}
         />
     )}
 </div>

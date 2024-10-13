@@ -1,6 +1,6 @@
 # ONE Südwest – Jugendliche von und für Jesus und seiner Gemeinde begeistern
 
-One Südwest ist die Landesjugendarbeit
+one südwest ist die Landesjugendarbeit
 des BFP in Rheinland-Pfalz und Saarland. Wir veranstalten Jugendfreizeiten
 und Weiterbildungsevents für Jugendleiter und Mitarbeiter.
 

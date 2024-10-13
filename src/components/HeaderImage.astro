@@ -7,7 +7,6 @@ export interface Props {
     alt: string;
     position?: string;
     centerImage?: boolean;
-    bottomTransitionColor?: string;
 }
 
 const {
@@ -16,60 +15,20 @@ const {
     alt,
     position = "50% 50%",
     centerImage = false,
-    bottomTransitionColor = "var(--background-color)",
 } = Astro.props;
 ---
 
-<style is:inline>
-    .wrapper {
-        width: 100%;
-        height: calc(100vh - 100px);
-        position: relative;
-    }
-
-    .header-image {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        display: block;
-    }
-
-    .center-image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(100vw - 80px);
-        user-select: none;
-        pointer-events: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .bottom-transition {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-</style>
-
-<div class="wrapper">
+<div class="w-full h-[calc(100vh)] relative">
     <img
         src={src}
         srcset={srcset}
         alt={alt}
-        class="header-image"
+        class="object-cover h-full w-full block"
         style={`object-position: ${position}`}
     />
     {centerImage && (
-        <div class="center-image">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(100vw-80px)] select-none pointer-events-none flex justify-center items-center">
             <slot />
         </div>
     )}
-    <div class="bottom-transition">
-        <Transition
-            color={bottomTransitionColor}
-        />
-    </div>
 </div>

@@ -28,7 +28,7 @@ Falls du wissen möchtest, welche Vergünstigungen in deiner Stadt zur Verfügun
 
 Noch ist es meines Wissens nach bei uns in Rheinland-Pfalz und Saarland nicht so, dass eine Juleica eine Voraussetzung ist um Zuschüsse zu erhalten. Allerdings ist das in anderen Teilen Deutschlands schon ganz normal und es wäre gut wenn wir darauf vorbereitet wären, falls es irgendwann der Fall ist.
 
-Wenn wir Jugendveranstaltungen mit Übernachtungen planen, können wir als One Südwest aber auch ihr als eure Jugendgruppe in den jeweiligen Kreisen und Ländern Zuschüsse vom Staat bekommen. Es lohnt sich auf jeden Fall, sich mit diesem Thema mal zu beschäftigen.
+Wenn wir Jugendveranstaltungen mit Übernachtungen planen, können wir als one südwest aber auch ihr als eure Jugendgruppe in den jeweiligen Kreisen und Ländern Zuschüsse vom Staat bekommen. Es lohnt sich auf jeden Fall, sich mit diesem Thema mal zu beschäftigen.
 
 Für die Faschingsfreizeit machen die Zuschüsse jedes Jahr eine ordentliche Summe aus und auch lokale Jugendevents bei euch können damit gerne auch mal mehrere hundert Euro rein holen. Es wäre in diesem Zusammenhang natürlich sehr schade, wenn du keine Zuschüsse bekommen würdest, nur weil kein Mitarbeiter eine Juleica hat.
 

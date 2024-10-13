@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+@layer base {
+  @keyframes blurIn {
+    from {
+      backdrop-filter: blur(0);
+    }
+    to {
+      backdrop-filter: blur(10px); /* Adjust blur size as needed */
+    }
+  }
+  
+  @keyframes blurOut {
+    from {
+      backdrop-filter: blur(10px); /* Should match the 'to' value in blurIn */
+    }
+    to {
+      backdrop-filter: blur(0);
+    }
+  }
+  
+  .blur-in {
+    animation: blurIn 300ms forwards; /* Adjust duration as needed */
+  }
+  
+  .blur-out {
+    animation: blurOut 300ms forwards; /* Adjust duration as needed */
+  }
+
+  @keyframes moveInFromRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes moveOutToRight {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  .move-in-from-right {
+    animation: moveInFromRight 300ms forwards; /* Adjust duration as needed */
+  }
+  
+  .move-out-to-right {
+    animation: moveOutToRight 300ms forwards; /* Adjust duration as needed */
+  }
+
+  @keyframes colorRotate {
+    0% { color: #ff0000; }
+    20% { color: #ffff00; }
+    40% { color: #00ff00; }
+    60% { color: #00ffff; }
+    80% { color: #ff00ff; }
+    100% { color: #ff0000; }
+  }
+}
