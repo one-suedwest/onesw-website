@@ -26,7 +26,7 @@ const CountdownComponent = ({ prefixValue, suffixValue }: Props) => {
     };
 
     return (
-        <span className={counter > 0 ? 'text-cyan-400' : ''}>
+        <span className={counter > 0 ? 'text-orange-500' : ''}>
             {getContent()}
         </span>
     );

@@ -1,0 +1,43 @@
+---
+import Html from "../layouts/Html.astro";
+import Header from "../components/Header.tsx";
+import TextContent from "../components/TextContent.astro";
+
+const href = "/downloads";
+---
+
+<Html
+  title="Downloads | one südwest"
+  description="Lade unsere Werbematerialien, Videos, Beamerfolien, Flyer etc. herunter"
+  pageUrl="https://www.onesw.de/downloads"
+  ogTitle="Downloads"
+  ogDescription="Laden Sie hochwertige Materialien für Ihre Gottesdienste herunter"
+  imageAlt="Downloads von one südwest"
+  updatedTime="2024-10-15T18:00:00.000Z"
+  href={href}
+>
+  <Header
+    href={href}
+    client:load
+  />
+  <TextContent singleContent className="flex-grow">
+    <div class="flex flex-col gap-4">
+      <section>
+        <h1 class="text-orange-500 text-[50px] sm:text-[60px] font-black font-headline leading-[50px] sm:leading-[60px] mb-5 break-words">Downloads</h1>
+        <h2 class="mb-5">Hier findest du Slides, Videos und Flyer für unsere Events. Du darfst sie nutzen um Welle in deiner Church, bei deinen Freunden oder wo auch immer für unsere Events zu machen!</h2>
+      </section>
+      <section>
+        <div class="flex flex-col gap-4 mt-5 items-start flex-wrap sm:flex-row">
+            <a href="/downloads/onesw-downloads.zip" download class="py-2 px-4 bg-orange-500 hover:bg-orange-700 text-black no-underline text-center w-full sm:w-auto">Alles herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-slide.png" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Slide herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-promo-video.mov" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Promo Video herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-promo-video-hochkant.mov" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Promo Video Hochkant herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-flyer.jpg" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Flyer herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-plakat.png" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Plakat herunterladen</a>
+            <a href="/downloads/onesw-jcsquad-blanko-slide.png" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">JCSquad Blanko Slide herunterladen</a>
+            <a href="/downloads/onesw-lead-slide.png" download class="py-2 px-4 bg-white hover:bg-gray-300 text-black no-underline text-center w-full sm:w-auto">Lead Slide herunterladen</a>
+        </div>
+      </section>
+    </div>
+  </TextContent>
+</Html>
