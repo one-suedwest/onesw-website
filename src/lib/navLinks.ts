@@ -35,6 +35,13 @@ export const navLinks: NavLink[] = [
     //   key: "teamboost",
     // },
     {
+        text: "Downloads",
+        title: "Downloads",
+        href: "/downloads",
+        key: "downloads",
+        highlight: false,
+    },
+    {
         text: "Juleica",
         title: "Wofür braucht man eine Juleica?",
         href: "/warum-juleica",
