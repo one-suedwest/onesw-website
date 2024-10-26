@@ -1,11 +1,13 @@
+import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 
 interface Props {
     prefixValue: string;
     suffixValue: string;
+    spacingRight?: boolean;
 }
 
-const CountdownComponent = ({ prefixValue, suffixValue }: Props) => {
+const HiddenField = ({ prefixValue, suffixValue, spacingRight }: Props) => {
     const [counter, setCounter] = useState(10);
 
     useEffect(() => {
@@ -26,10 +28,10 @@ const CountdownComponent = ({ prefixValue, suffixValue }: Props) => {
     };
 
     return (
-        <span className={counter > 0 ? 'text-orange-500' : ''}>
+        <span className={cn('pl-1', spacingRight && 'pr-1', counter > 0 && 'text-orange-500')}>
             {getContent()}
         </span>
     );
 }
 
-export default CountdownComponent;
+export default HiddenField;
