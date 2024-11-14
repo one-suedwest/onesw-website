@@ -49,9 +49,9 @@ const Header = (props: HeaderProps) => {
       >
         <ul className="justify-end items-center gap-4 hidden md:flex" role="menu">
           {navLinks.filter(x => x.highlight).map((navLink) => (
-            <li role="none" className="z-20">
+            <li role="none" className="z-20" key={navLink.href}>
               <a
-                className={cn("text-white font-headline text-xl font-black hover:text-orange-500", href === navLink.href && "text-orange-500")}
+                className={cn("text-white font-headline text-xl font-black hover:text-cyan-300", href === navLink.href && "text-cyan-300")}
                 href={navLink.href}
                 aria-label={navLink.text}
                 target={navLink.href.startsWith("/") ? "_self" : "_blank"}
@@ -62,7 +62,7 @@ const Header = (props: HeaderProps) => {
             </li>
           ))}
         </ul>
-        <button onClick={() => setMenuState()} className="text-white rounded-md z-20 hover:text-orange-500">
+        <button onClick={() => setMenuState()} className="text-white rounded-md z-20 hover:text-cyan-300">
           {!fadedState ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
         {isOpen && (
@@ -85,8 +85,8 @@ const Header = (props: HeaderProps) => {
                 >
                   <a
                     className={cn(
-                      "text-white px-4 py-2 hover:text-orange-500",
-                      href === navLink.href && "text-orange-500"
+                      "text-white px-4 py-2 hover:text-cyan-300",
+                      href === navLink.href && "text-cyan-300"
                     )}
                     href={navLink.href}
                     title={navLink.title}
@@ -104,8 +104,8 @@ const Header = (props: HeaderProps) => {
                   <li key={navLink.href}>
                     <a
                       className={cn(
-                        "text-white hover:text-orange-500",
-                        href === navLink.href && "text-orange-500"
+                        "text-white hover:text-cyan-300",
+                        href === navLink.href && "text-cyan-300"
                       )}
                       href={navLink.href}
                       title={navLink.title}

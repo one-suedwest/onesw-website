@@ -28,7 +28,7 @@ const HiddenField = ({ prefixValue, suffixValue, spacingRight }: Props) => {
     };
 
     return (
-        <span className={cn('pl-1', spacingRight && 'pr-1', counter > 0 && 'text-orange-500')}>
+        <span className={cn('pl-1', spacingRight && 'pr-1', counter > 0 && 'text-cyan-300')}>
             {getContent()}
         </span>
     );
