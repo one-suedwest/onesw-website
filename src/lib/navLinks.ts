@@ -21,13 +21,13 @@ export const navLinks: NavLink[] = [
         key: "faschi",
         highlight: true,
     },
-    {
-        text: "Lead",
-        title: "Die ONE Lead im Frühjahr 2025",
-        href: "/lead",
-        key: "lead",
-        highlight: true,
-    },
+    // {
+    //     text: "Lead",
+    //     title: "Die ONE Lead im Frühjahr 2025",
+    //     href: "/lead",
+    //     key: "lead",
+    //     highlight: true,
+    // },
     // {
     //   text: "Teamboost",
     //   title: "Der ONE Südwest Teamboost im Herbst 2023",

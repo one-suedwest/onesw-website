@@ -14,5 +14,9 @@
     {
         "path": "youtube",
         "to": "https://www.youtube.com/channel/UCLFN65oYHbCQB-mkya-DTKA"
+    },
+    {
+        "path": "lead",
+        "to": "https://www.onesw.de"
     }
 ]
