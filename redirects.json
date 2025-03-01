@@ -18,5 +18,9 @@
     {
         "path": "lead",
         "to": "https://www.onesw.de"
+    },
+    {
+        "path": "session",
+        "to": "https://pretix.onesw.de/onesw/jcsquad/"
     }
 ]
