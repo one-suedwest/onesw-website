@@ -22,5 +22,9 @@
     {
         "path": "session",
         "to": "https://pretix.onesw.de/onesw/jcsquad/"
+    },
+    {
+        "path": "feedback",
+        "to": "https://docs.google.com/forms/d/e/1FAIpQLSevdOEsMxEWUL16A5mTuBYEN_m97nqASEqNHCAHjmvfLt087w/viewform?pli=1"
     }
 ]
