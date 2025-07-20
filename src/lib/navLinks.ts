@@ -15,12 +15,19 @@ export const navLinks: NavLink[] = [
         highlight: false,
     },
     {
-        text: "Faschingsfreizeit",
-        title: "Die JCSquad Faischingsfreizeit 2025",
-        href: "/jcsquad",
-        key: "faschi",
+        text: "Teamboost",
+        title: "Bringe dich und dein Team auf ein neues Level!",
+        href: "https://pretix.onesw.de/onesw/teamboost25/",
+        key: "teamboost",
         highlight: true,
     },
+    // {
+    //     text: "Faschingsfreizeit",
+    //     title: "Die JCSquad Faischingsfreizeit 2025",
+    //     href: "/jcsquad",
+    //     key: "faschi",
+    //     highlight: true,
+    // },
     // {
     //     text: "Lead",
     //     title: "Die ONE Lead im Frühjahr 2025",
