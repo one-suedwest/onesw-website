@@ -14,6 +14,13 @@ export const navLinks: NavLink[] = [
         key: "startseite",
         highlight: false,
     },
+    Date.now() > new Date('2025-09-13T14:00:00').getTime() && {
+        text: "Faschingsfreizeit",
+        title: "Die SHIFT Faischingsfreizeit 2026",
+        href: "https://pretix.onesw.de/onesw/shift/",
+        key: "faschi",
+        highlight: true,
+    },
     {
         text: "Teamboost",
         title: "Bringe dich und dein Team auf ein neues Level!",
@@ -83,4 +90,4 @@ export const navLinks: NavLink[] = [
         key: "youtube",
         highlight: false
     },
-];
+].filter(Boolean) as NavLink[];

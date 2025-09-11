@@ -17,11 +17,11 @@
     },
     {
         "path": "lead",
-        "to": "https://www.onesw.de"
+        "to": "https://pretix.onesw.de/onesw/lead26/"
     },
     {
-        "path": "session",
-        "to": "https://pretix.onesw.de/onesw/jcsquad/"
+        "path": "shift",
+        "to": "https://pretix.onesw.de/onesw/shift/"
     },
     {
         "path": "feedback",
