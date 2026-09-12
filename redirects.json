@@ -23,6 +23,11 @@
         "path": "shift",
         "to": "https://pretix.onesw.de/onesw/shift/"
     },
+    
+    {
+        "path": "exodus",
+        "to": "https://pretix.onesw.de/onesw/faschi27/"
+    },
     {
         "path": "feedback",
         "to": "https://docs.google.com/forms/d/e/1FAIpQLSevdOEsMxEWUL16A5mTuBYEN_m97nqASEqNHCAHjmvfLt087w/viewform?pli=1"
